@@ -18,6 +18,12 @@ const config = {
       }
     },
     extend: {
+      colors: {
+        'primary-orange': '#f8673a'
+      },
+      backgroundImage: {
+        'main-hero': "url('/main-hero-bg.jpg')"
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -34,7 +40,7 @@ const config = {
       }
     }
   },
-  plugins: [require('tailwindcss-animate')]
+  plugins: [require('tailwindcss-animate'), require('tailwindcss-animated')]
 } satisfies Config
 
 export default config

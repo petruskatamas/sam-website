@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-slate-500`}>
         <NavBar />
-        <main className="w-full max-w-screen-lg mx-auto">{children}</main>
+        {children}
       </body>
     </html>
   )
