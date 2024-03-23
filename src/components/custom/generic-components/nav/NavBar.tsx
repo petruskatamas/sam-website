@@ -22,7 +22,7 @@ export const NavBar = () => {
         <Image src={navLogo} alt="SAM Logo" className="h-10 w-9" />
       </Link>
       <div className="w-fit flex flex-row items-center gap-1">
-        <NavMenu scrolled={scrolled} />
+        <NavMenu />
         <Button variant={'secondary'} className="flex flex-row items-center gap-4">
           Belépés
           <LogIn />

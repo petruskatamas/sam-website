@@ -48,14 +48,12 @@ const helpMenu: { title: string; href: string; description: string }[] = [
   }
 ]
 
-export default function NavigationMenuDemo({ scrolled }: { scrolled: boolean }) {
+export default function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className={`${scrolled ? '' : 'bg-transparent'}`}>
-            Rólunk
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Rólunk</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.7fr_1fr]">
               <li className="row-span-3">
@@ -89,11 +87,9 @@ export default function NavigationMenuDemo({ scrolled }: { scrolled: boolean }) 
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className={`${scrolled ? '' : 'bg-transparent'}`}>
-            Árak
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Árak</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[500px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[500px]">
               {pricesMenu.map((component) => (
                 <ListItem key={component.title} title={component.title} href={component.href}>
                   {component.description}
@@ -103,9 +99,7 @@ export default function NavigationMenuDemo({ scrolled }: { scrolled: boolean }) 
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className={`${scrolled ? '' : 'bg-transparent'}`}>
-            Segítség
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Segítség</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[500px] ">
               {helpMenu.map((component) => (
@@ -118,9 +112,7 @@ export default function NavigationMenuDemo({ scrolled }: { scrolled: boolean }) 
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={`${navigationMenuTriggerStyle()} ${scrolled ? '' : 'bg-transparent'}`}
-            >
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Kapcsolat
             </NavigationMenuLink>
           </Link>

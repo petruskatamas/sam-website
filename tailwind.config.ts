@@ -17,6 +17,7 @@ const config = {
         '2xl': '1400px'
       }
     },
+    safelist: ['bg-transparent'],
     extend: {
       colors: {
         'primary-orange': '#f8673a'
