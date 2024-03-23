@@ -48,12 +48,14 @@ const helpMenu: { title: string; href: string; description: string }[] = [
   }
 ]
 
-export default function NavigationMenuDemo() {
+export default function NavigationMenuDemo({ scrolled }: { scrolled: boolean }) {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Rólunk</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={`${scrolled ? '' : 'bg-transparent'}`}>
+            Rólunk
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.7fr_1fr]">
               <li className="row-span-3">
@@ -87,7 +89,9 @@ export default function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Árak</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={`${scrolled ? '' : 'bg-transparent'}`}>
+            Árak
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[500px] ">
               {pricesMenu.map((component) => (
@@ -99,7 +103,9 @@ export default function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Segítség</NavigationMenuTrigger>
+          <NavigationMenuTrigger className={`${scrolled ? '' : 'bg-transparent'}`}>
+            Segítség
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[500px] ">
               {helpMenu.map((component) => (
@@ -112,7 +118,9 @@ export default function NavigationMenuDemo() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={`${navigationMenuTriggerStyle()} ${scrolled ? '' : 'bg-transparent'}`}
+            >
               Kapcsolat
             </NavigationMenuLink>
           </Link>
