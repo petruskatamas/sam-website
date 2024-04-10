@@ -20,10 +20,11 @@ const config = {
     safelist: ['bg-transparent'],
     extend: {
       colors: {
-        'primary-orange': '#f8673a'
+        'primary-orange': '#f8673a',
+        'dark-blue': '#15325a'
       },
       backgroundImage: {
-        'main-hero': "url('/main-hero-bg.jpg')"
+        'main-hero': "url('/main-hero-bg.webp')"
       },
       keyframes: {
         'accordion-down': {
