@@ -19,11 +19,11 @@ interface HeroCradInterface {
 const HeroCard = ({ name, link, qrCode, image, tooltip }: HeroCradInterface) => {
   return (
     <a href={link} className="relative group">
-      <div className="w-[200px] p-6 flex flex-col items-center gap-6 rounded-lg shadow-2xl bg-white">
+      <div className="relative z-[2] w-[200px] p-6 flex flex-col items-center gap-6 rounded-lg shadow-2xl bg-white">
         <Image src={image} alt={name} className="w-[60px] h-[65px]" />
         <Image src={qrCode} alt={`QR Code - ${name}`} className="w-full" />
       </div>
-      <div className="absolute hidden group-hover:flex p-3 py-1 w-full items-center justify-center -bottom-[50px] rounded-lg bg-black bg-opacity-25 text-white">
+      <div className="absolute z-[1] -translate-y-16 group-hover:-translate-y-0 flex p-3 py-1 w-full items-center justify-center -bottom-[50px] rounded-lg bg-black bg-opacity-25 text-white transition-all ease-in-out duration-300">
         <div className="relative">
           <div
             className="absolute -top-[26px] left-[72px] w-0 h-0
@@ -40,30 +40,34 @@ const HeroCard = ({ name, link, qrCode, image, tooltip }: HeroCradInterface) => 
 
 export const MainPageHero = () => {
   return (
-    <div className="w-full h-screen bg-main-hero bg-fixed bg-cover bg-center">
-      <div className="w-full h-full bg-transparent backdrop-blur-lg">
-        <div className="flex flex-row justify-between items-center w-full h-full max-w-screen-lg mx-auto">
-          <div className="w-fit flex flex-col items-start gap-10 max-w-[400px]">
+    <div className="w-full h-screen bg-main-hero bg-fixed bg-cover bg-center flex flex-row">
+      <div className="w-1/2 h-full bg-white backdrop-blur-lg">
+        <div className="flex flex-row justify-center items-center w-full h-full">
+          <div className="w-1/2 flex flex-col items-start gap-10 max-w-[400px]">
             <Image
               src={samLogo}
               alt="Simple Accounting Manager"
               className="w-full animate-fade-right animate-duration-[800ms] animate-ease-in-out"
             />
-            <div className="w-full gap-8 flex justify-center animate-fade-right animate-duration-[800ms] animate-delay-[500ms] animate-ease-in-out">
+            <div className="w-full border-primary-orange gap-8 flex justify-center animate-fade-right animate-duration-[800ms] animate-delay-[500ms] animate-ease-in-out">
               <Button
                 variant={'secondary'}
                 size={'lg'}
-                className="flex flex-row items-center gap-4"
+                className="flex flex-row items-center gap-4 shadow-lg"
               >
                 Belépés
                 <LogIn />
               </Button>
-              <Button size={'lg'} variant={'outline'}>
+              <Button size={'lg'} variant={'outline'} className="shadow-lg">
                 Tudj meg többet!
               </Button>
             </div>
           </div>
-          <div className="w-fit flex flex-row items-start gap-10 max-w-[400px]">
+        </div>
+      </div>
+      <div className="w-1/2 h-full bg-transparent backdrop-blur-lg">
+        <div className="flex flex-row justify-center items-center w-full h-full">
+          <div className="w-fit flex flex-row gap-12 mx-auto items-start">
             <HeroCard
               name="App Store"
               link="/"
