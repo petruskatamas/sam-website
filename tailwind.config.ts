@@ -24,7 +24,8 @@ const config = {
         'dark-blue': '#15325a'
       },
       backgroundImage: {
-        'main-hero': "url('/main-hero-bg.webp')"
+        'main-hero': "url('/main-hero-bg.webp')",
+        'pros-hero': "url('/pros-bg.webp')"
       },
       keyframes: {
         'accordion-down': {
