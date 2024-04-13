@@ -45,7 +45,7 @@ export const MainPageHero = () => {
         <div className="absolute bottom-6 w-full flex flex-col gap-3 justify-center items-center animate-fade-down animate-delay-[2000ms]">
           {/* <span className='text-sm text-slate-400'>Részletek</span> */}
           <a
-            href="#main"
+            href="#about-us"
             className="p-2 rounded-full bg-white shadow-lg border-slate-200 border animate-bounce animate-duration-[1500ms] animate-ease-in-out"
           >
             <ArrowDownIcon className="text-slate-300" />

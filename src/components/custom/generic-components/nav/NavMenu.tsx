@@ -26,7 +26,7 @@ const pricesMenu: { title: string; href: string; description: string }[] = [
   {
     title: 'Cégek részére',
     href: '/docs/primitives/hover-card',
-    description: 'Kezelje cége künyvelését könnyedén!'
+    description: 'Kezelje cége könyvelését könnyedén!'
   }
 ]
 
