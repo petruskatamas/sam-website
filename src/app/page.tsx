@@ -1,11 +1,13 @@
+import { MainPageAboutUsSection } from '@/components/custom/main-page/MainPageAboutUsSection'
 import { MainPageHero } from '@/components/custom/main-page/MainPageHero'
-import { MainPageProblemSection } from '@/components/custom/main-page/MainPageProblemSection'
+import { MainPagePros } from '@/components/custom/main-page/MainPagePros'
 
 export default function Home() {
   return (
     <>
       <MainPageHero />
-      <MainPageProblemSection />
+      <MainPageAboutUsSection />
+      <MainPagePros />
     </>
   )
 }
