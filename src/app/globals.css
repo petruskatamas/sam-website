@@ -19,5 +19,5 @@ h3 {
 }
 
 p {
-    @apply text-lg leading-[24px] tracking-tight
+    @apply text-base leading-[24px] tracking-tight font-normal
 }

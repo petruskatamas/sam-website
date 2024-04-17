@@ -18,6 +18,8 @@ import { Textarea } from '@/components/ui/textarea'
 import { Switch } from '@/components/ui/switch'
 import { SendHorizonalIcon } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
+import samLogo from '@/images/sam-logo-small.svg'
 
 const phoneRegex = /^\+3620|^\+3630|^\+3670|^\+361|^\+3631/
 
@@ -119,7 +121,11 @@ const CompanyFormComponent = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Textarea placeholder="Megjegyzés érdeklődésével kapcsolatban" {...field} />
+                <Textarea
+                  placeholder="Megjegyzés érdeklődésével kapcsolatban"
+                  rows={6}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -179,7 +185,7 @@ const PricingTabs = () => {
   return (
     <Tabs
       defaultValue="company"
-      className="w-full h-full flex flex-col justify-start items-center gap-6"
+      className="w-full h-full flex flex-col justify-between items-center gap-6"
     >
       <TabsList>
         <TabsTrigger value="company">CÉGEK RÉSZÉRE</TabsTrigger>
@@ -195,20 +201,32 @@ const PricingTabs = () => {
 
 export const MainPagePricing = () => {
   return (
-    <div className="w-full h-[700px] py-32 bg-white">
-      <div className="w-full h-full max-w-screen-lg mx-auto flex flex-row justify-between gap-24 items-center">
-        <div className="w-1/2 h-full flex flex-col justify-start gap-6">
+    <div className="w-full h-screen py-32 bg-white">
+      <div className="w-full h-full max-w-screen-lg mx-auto flex flex-row justify-between gap-24 items-start">
+        <div className="w-1/2 h-full flex flex-col justify-between">
           <h2 className="border-b border-primary-orange pb-6">Árak</h2>
-          <p>
-            Mind a könyvelőirodák, mind pedig a szolgáltatást használó cégek részére mérethez
-            igazított előfizetési díjat biztosítunk. Ezzel is elősegítve a felesleges kiadások
-            csökkentését.
-          </p>
-          <p>
-            A személyre szabott díjak a rendszer használatát, és a feltöltött dokumentumok tárolását
-            is magukban foglalják. Ezáltal kiváltható minden olyan infrastrukturális, vagy
-            szolgáltatói platform, melyek eddig a keletkezett dokumentumok tárolására szolgáltak.
-          </p>
+          <div className="w-full flex flex-col gap-6">
+            <p>
+              Mind a könyvelőirodák, mind pedig a szolgáltatást használó cégek részére mérethez
+              igazított előfizetési díjat biztosítunk. Ezzel is elősegítve a felesleges kiadások
+              csökkentését.
+            </p>
+            <p>
+              A személyre szabott díjak a rendszer használatát, és a feltöltött dokumentumok
+              tárolását is magukban foglalják. Ezáltal kiváltható minden olyan infrastrukturális,
+              vagy szolgáltatói platform, melyek eddig a keletkezett dokumentumok tárolására
+              szolgáltak.
+            </p>
+          </div>
+          <div className="flex flex-row justify-between gap-4 items-center">
+            <div className="w-full h-[1px] bg-primary-orange" />
+            <Image
+              src={samLogo}
+              alt="SAM Logo"
+              className="w-16 h-16 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
+            />
+            <div className="w-full h-[1px] bg-primary-orange" />
+          </div>
         </div>
         <div className="w-1/2 h-full flex justify-end items-start">
           <PricingTabs />
