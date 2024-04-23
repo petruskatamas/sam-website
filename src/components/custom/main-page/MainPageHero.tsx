@@ -40,24 +40,31 @@ const HeroCard = ({ name, link, qrCode, image, tooltip }: HeroCradInterface) => 
 
 export const MainPageHero = () => {
   return (
-    <div className="w-full h-screen bg-main-hero bg-fixed bg-cover bg-center flex flex-row">
-      <div className="relative w-1/2 h-full bg-white">
+    <div className="w-full h-screen bg-main-hero bg-fixed bg-cover bg-center flex flex-col lg:flex-row">
+      <div className="relative w-full lg:w-1/2 h-full bg-white border-b border-primary-orange">
         <div className="absolute bottom-6 w-full flex flex-col gap-3 justify-center items-center animate-fade-down animate-delay-[2000ms]">
-          {/* <span className='text-sm text-slate-400'>Részletek</span> */}
-          <a
-            href="#about-us"
-            className="p-2 rounded-full bg-white shadow-lg border-slate-200 border animate-bounce animate-duration-[1500ms] animate-ease-in-out"
-          >
-            <ArrowDownIcon className="text-slate-300" />
-          </a>
+          <div className="flex flex-col gap-2 items-center animate-bounce animate-duration-1500 animate-ease-in-out">
+            <span className="text-sm text-slate-300">Tudjon meg többet</span>
+            <a
+              href="#about-us"
+              className="p-2 rounded-full w-fit bg-white shadow-lg border-slate-200 border"
+            >
+              <ArrowDownIcon className="text-slate-300" />
+            </a>
+          </div>
         </div>
         <div className="flex flex-row justify-center items-center w-full h-full">
           <div className="w-1/2 flex flex-col items-start gap-10 max-w-[400px]">
             <Image
               src={samLogo}
-              alt="Simple Accounting Manager"
+              alt="Simple Accounting Management"
               className="w-full animate-fade-right animate-duration-[800ms] animate-ease-in-out"
             />
+            <div className="w-full">
+              <h2 className="w-full text-center font-medium text-base border-t border-b border-primary-orange py-4">
+                Könyvelés cégeknek - könnyen és egyszerűen.
+              </h2>
+            </div>
             <div className="w-full border-primary-orange gap-8 flex justify-center animate-fade-right animate-duration-[800ms] animate-delay-[500ms] animate-ease-in-out">
               <Button
                 variant={'secondary'}
@@ -67,14 +74,11 @@ export const MainPageHero = () => {
                 Belépés
                 <LogIn />
               </Button>
-              <Button size={'lg'} variant={'outline'} className="shadow-lg">
-                Tudj meg többet!
-              </Button>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-1/2 h-full bg-black/25 backdrop-blur-lg">
+      <div className="w-full lg:w-1/2 h-full bg-black/25 backdrop-blur-lg">
         <div className="flex flex-row justify-center items-center w-full h-full">
           <div className="w-fit flex flex-row gap-12 mx-auto items-start">
             <HeroCard
