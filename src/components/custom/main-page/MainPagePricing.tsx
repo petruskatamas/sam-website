@@ -183,27 +183,31 @@ const CompanyFormComponent = () => {
 
 const PricingTabs = () => {
   return (
-    <Tabs
-      defaultValue="company"
-      className="w-full h-full flex flex-col justify-between items-center gap-6"
-    >
-      <TabsList>
-        <TabsTrigger value="company">CÉGEK RÉSZÉRE</TabsTrigger>
-        <TabsTrigger value="office">KÖNYVELŐIRODÁK RÉSZÉRE</TabsTrigger>
-      </TabsList>
-      <TabsContent value="company" className="w-full">
-        <CompanyFormComponent />
-      </TabsContent>
-      <TabsContent value="office">Change your password here.</TabsContent>
-    </Tabs>
+    <div className="w-full h-fit">
+      <Tabs
+        defaultValue="company"
+        className="w-full h-full flex flex-col justify-between items-center gap-6"
+      >
+        <TabsList>
+          <TabsTrigger value="office">KÖNYVELŐIRODÁK RÉSZÉRE</TabsTrigger>
+          <TabsTrigger value="company">CÉGEK RÉSZÉRE</TabsTrigger>
+        </TabsList>
+        <TabsContent value="company" className="w-full">
+          <CompanyFormComponent />
+        </TabsContent>
+        <TabsContent value="office">
+          <CompanyFormComponent />
+        </TabsContent>
+      </Tabs>
+    </div>
   )
 }
 
 export const MainPagePricing = () => {
   return (
-    <div className="w-full h-screen py-32 bg-white">
-      <div className="w-full h-full max-w-screen-lg mx-auto flex flex-row justify-between gap-24 items-start">
-        <div className="w-1/2 h-full flex flex-col justify-between">
+    <div className="w-full h-fit lg:h-screen py-16 lg:py-32 bg-white px-4 md:px-8 lg:px-0">
+      <div className="w-full h-full max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-24 items-start">
+        <div className="w-full md:w-1/2 h-full flex flex-col justify-between gap-6">
           <h2 className="border-b border-primary-orange pb-6">Árak</h2>
           <div className="w-full flex flex-col gap-6">
             <p>
@@ -228,7 +232,7 @@ export const MainPagePricing = () => {
             <div className="w-full h-[1px] bg-primary-orange" />
           </div>
         </div>
-        <div className="w-1/2 h-full flex justify-end items-start">
+        <div className="w-full md:w-1/2 h-full flex justify-center items-center">
           <PricingTabs />
         </div>
       </div>

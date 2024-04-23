@@ -14,10 +14,10 @@ const FooterListItem = ({ children, href }: { children: ReactNode; href: string 
 export const Footer = () => {
   return (
     <footer className="w-full">
-      <div className="w-full border-t border-primary-orange max-w-screen-lg mx-auto flex flex-col">
-        <div className="w-full py-10 flex flex-row-reverse justify-between">
-          <div className="w-fit h-full flex flex-row justify-between items-center">
-            <div className="w-full flex flex-row gap-10 items-center">
+      <div className="w-full border-t border-primary-orange max-w-screen-lg mx-auto flex flex-col px-8 lg:px-0 ">
+        <div className="w-full py-10 flex flex-col-reverse lg:flex-row-reverse justify-between">
+          <div className="w-full lg:w-fit h-full flex flex-row justify-between items-center">
+            <div className="w-full flex flex-col md:flex-row gap-10 justify-center  items-center">
               <div className="w-[200px] flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
                 <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
                   Rólunk
@@ -54,24 +54,33 @@ export const Footer = () => {
           </div>
         </div>
         <div className="w-full py-4 border-t border-primary-orange flex justify-center items-center">
-          <div className="flex flex-row gap-4 divide-x divide-slate-500">
-            <Link href={'#'} className="text-sm hover:underline">
+          <div className="w-full md:w-fit flex flex-col md:flex-row gap-4 items-center divide-y divide-x-0 md:divide-y-0 md:divide-x divide-slate-500">
+            <Link href={'#'} className="text-sm text-center hover:underline w-full md:w-fit">
               ÁSZF
             </Link>
-            <Link href={'#'} className="text-sm hover:underline pl-4">
+            <Link
+              href={'#'}
+              className="text-sm text-center hover:underline w-full md:w-fit pt-4 pl-0 md:pt-0 md:pl-4"
+            >
               Adatvédelem
             </Link>
-            <Link href={'#'} className="text-sm hover:underline pl-4">
+            <Link
+              href={'#'}
+              className="text-sm text-center hover:underline w-full md:w-fit pt-4 pl-0 md:pt-0 md:pl-4"
+            >
               Felhasználási feltételek
             </Link>
-            <Link href={'#'} className="text-sm hover:underline pl-4">
+            <Link
+              href={'#'}
+              className="text-sm text-center hover:underline w-full md:w-fit pt-4 pl-0 md:pt-0 md:pl-4"
+            >
               Panaszkezelés
             </Link>
           </div>
         </div>
       </div>
       <div className="w-full bg-primary-orange/90 h-10 flex justify-center items-center">
-        <span className="text-sm text-white">
+        <span className="text-sm text-white px-16">
           Simple Accounting Management © 2024 Minden jog fenntartva
         </span>
       </div>
