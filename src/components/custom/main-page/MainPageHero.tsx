@@ -6,6 +6,8 @@ import appleLogo from '@/images/app-store.png'
 import playStoreLogo from '@/images/robot.png'
 import appleQR from '@/images/apple-sam-qr.png'
 import androidQR from '@/images/android-sam-qr.png'
+import getItInPlay from '@/images/get-in-play.png'
+import getItInApp from '@/images/get-in-app.png'
 import { ArrowDownIcon, LogIn } from 'lucide-react'
 
 interface HeroCradInterface {
@@ -40,8 +42,8 @@ const HeroCard = ({ name, link, qrCode, image, tooltip }: HeroCradInterface) => 
 
 export const MainPageHero = () => {
   return (
-    <div className="w-full h-screen bg-main-hero bg-fixed bg-cover bg-center flex flex-col lg:flex-row">
-      <div className="relative w-full lg:w-1/2 h-full bg-white border-b border-primary-orange">
+    <div className="w-full h-fit lg:h-screen bg-main-hero bg-fixed bg-cover bg-center flex flex-col lg:flex-row ">
+      <div className="relative w-full h-screen lg:h-full lg:w-1/2 bg-white border-b border-primary-orange pb-16 lg:pb-0">
         <div className="absolute bottom-6 w-full flex flex-col gap-3 justify-center items-center animate-fade-down animate-delay-[2000ms]">
           <div className="flex flex-col gap-2 items-center animate-bounce animate-duration-1500 animate-ease-in-out">
             <span className="text-sm text-slate-300">Tudjon meg többet</span>
@@ -58,14 +60,14 @@ export const MainPageHero = () => {
             <Image
               src={samLogo}
               alt="Simple Accounting Management"
-              className="w-full animate-fade-right animate-duration-[800ms] animate-ease-in-out"
+              className="w-full lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-ease-in-out"
             />
             <div className="w-full">
               <h2 className="w-full text-center font-medium text-base border-t border-b border-primary-orange py-4">
                 Könyvelés cégeknek - könnyen és egyszerűen.
               </h2>
             </div>
-            <div className="w-full border-primary-orange gap-8 flex justify-center animate-fade-right animate-duration-[800ms] animate-delay-[500ms] animate-ease-in-out">
+            <div className="w-full border-primary-orange gap-8 flex justify-center lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-delay-[500ms] lg:animate-ease-in-out">
               <Button
                 variant={'secondary'}
                 size={'lg'}
@@ -75,12 +77,20 @@ export const MainPageHero = () => {
                 <LogIn />
               </Button>
             </div>
+            <div className="w-full flex flex-col lg:hidden items-center justify-center gap-2">
+              <a className="w-fit h-fit" href="/">
+                <Image src={getItInPlay} alt="Play Strore" className="w-[162px]" />
+              </a>
+              <a className="w-fit h-fit" href="/">
+                <Image src={getItInApp} alt="App Strore" className="w-[250px]" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 h-full bg-black/25 backdrop-blur-lg">
+      <div className="hidden lg:block w-1/2 h-full bg-black/25 backdrop-blur-lg">
         <div className="flex flex-row justify-center items-center w-full h-full">
-          <div className="w-fit flex flex-row gap-12 mx-auto items-start">
+          <div className="w-fit flex flex-col md:flex-row gap-12 mx-auto items-start">
             <HeroCard
               name="App Store"
               link="/"

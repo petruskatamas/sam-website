@@ -92,8 +92,8 @@ export const MainPageAboutUsSection = () => {
           <Image src={aboutArtwork} alt="Artwork" className="w-full" />
         </div>
         <div className="w-full">
-          <div className="container pb-16">
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="pb-16">
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-8">
               <div className="relative lg:sticky top-0 lg:top-32 w-full lg:w-5/6 h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border">
                 <h2 className="border-b border-primary-orange pb-4 text-3xl font-semibold tracking-tight">
                   Újfajta kapcsolat könyvelőirodák és ügyfeleik között
@@ -105,7 +105,7 @@ export const MainPageAboutUsSection = () => {
                 </p>
                 <p className="mt-5">
                   <a
-                    className="inline-flex items-center text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
+                    className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
                     href="#"
                   >
                     Lépjen kapcsolatba a{' '}

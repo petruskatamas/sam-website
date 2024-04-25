@@ -15,14 +15,14 @@ export const MainPagePros = () => {
   return (
     <div className="w-full h-fit lg:h-screen bg-pros-hero bg-fixed bg-repeat">
       <div className="w-full h-full bg-black/30 backdrop-blur-lg flex justify-center items-center py-8 px-4 md:px-8 lg:px-0 lg:py-0">
-        <div className="w-fit lg:w-full max-w-screen-lg h-3/4 bg-white shadow-xl rounded-lg p-10 flex flex-row">
+        <div className="w-fit lg:w-full max-w-screen-lg h-3/4 bg-white shadow-xl rounded-lg p-6 lg:p-10 flex flex-row">
           <div className="w-full lg:w-[55%] h-full flex flex-col gap-8 justify-center items-start">
             <h2 className="w-full border-b border-primary-orange pb-4 flex flex-row justify-center items-center gap-4">
               Mik a{' '}
               <Image
                 src={samLogo}
                 alt="SAM Logo"
-                className="w-16 h-16 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
+                className="w-12 h-12 md:w-16 md:h-16 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
               />{' '}
               előnyei?
             </h2>
