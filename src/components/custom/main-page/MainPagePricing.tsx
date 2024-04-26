@@ -205,11 +205,11 @@ const PricingTabs = () => {
 
 export const MainPagePricing = () => {
   return (
-    <div className="w-full h-fit lg:h-screen py-16 lg:py-32 bg-white px-4 md:px-8 lg:px-0">
+    <div className="w-full h-fit lg:h-[800px] py-16 lg:py-32 bg-white px-4 md:px-8 lg:px-0">
       <div className="w-full h-full max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-24 items-start">
-        <div className="w-full md:w-1/2 h-full flex flex-col justify-between gap-6">
+        <div className="w-full md:w-1/2 h-full flex flex-col justify-center gap-6">
           <h2 className="border-b border-primary-orange pb-6">Árak</h2>
-          <div className="w-full flex flex-col gap-6">
+          <div className="w-full flex flex-col pt-6 gap-6">
             <p>
               Mind a könyvelőirodák, mind pedig a szolgáltatást használó cégek részére mérethez
               igazított előfizetési díjat biztosítunk. Ezzel is elősegítve a felesleges kiadások

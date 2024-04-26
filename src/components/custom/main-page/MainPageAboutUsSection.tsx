@@ -119,13 +119,13 @@ export const MainPageAboutUsSection = () => {
                   </a>
                 </p>
               </div>
-              <div className="space-y-6 lg:space-y-10">
+              <div className="space-y-6 lg:space-y-10 px-2 lg:px-0">
                 <div className="flex group cursor-default">
                   <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full shadow-lg text-primary-orange group-hover:bg-primary-orange/90 group-hover:shadow-xl group-hover:text-white transition-all ease-in-out duration-300">
                     <EyeIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange/90">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange/90">
                       Egy jó SAM mindent lát
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -139,7 +139,7 @@ export const MainPageAboutUsSection = () => {
                     <QrCodeIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Egyszerűen, digitálisan
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -153,7 +153,7 @@ export const MainPageAboutUsSection = () => {
                     <TabletSmartphoneIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Mobilapplikáció
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -167,7 +167,7 @@ export const MainPageAboutUsSection = () => {
                     <AlarmClockCheckIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Időhatékony
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -181,7 +181,7 @@ export const MainPageAboutUsSection = () => {
                     <CloudUploadIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Felhő alapú megoldás
                     </h3>
                     <p className="mt-1 text-muted-foreground">

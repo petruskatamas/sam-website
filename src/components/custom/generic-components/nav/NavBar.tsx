@@ -13,6 +13,10 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion'
+import facebook from '@/images/icons/icons8-facebook (1).svg'
+import threads from '@/images/icons/icons8-threads.svg'
+import instagram from '@/images/icons/icons8-instagram-48.png'
+import linkedin from '@/images/icons/icons8-linkedin.svg'
 
 export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -48,37 +52,41 @@ export const NavBar = () => {
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-2" className="border-none">
-                  <AccordionTrigger className="decoration-transparent">Árak</AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 pl-4">
-                    <Link href="/" className="text-lg">
-                      Könyvelőirodáknak
-                    </Link>
-                    <Link href="/" className="text-lg">
-                      Cégeknek
-                    </Link>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3" className="border-none">
-                  <AccordionTrigger className="decoration-transparent">Segítség</AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 pl-4">
-                    <Link href="/" className="text-lg">
-                      FAQ
-                    </Link>
-                    <Link href="/" className="text-lg">
-                      Integráció
-                    </Link>
-                    <Link href="/" className="text-lg">
-                      Oktató anyagok
-                    </Link>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-4" className="border-none pt-4">
+                <AccordionItem value="item-2" className="border-none py-4">
                   <Link href="/" className="text-lg font-medium">
-                    Kapcsolat
+                    Árak
+                  </Link>
+                </AccordionItem>
+                <AccordionItem value="item-3" className="border-none py-4">
+                  <Link href="/" className="text-lg font-medium">
+                    FAQ
+                  </Link>
+                </AccordionItem>
+                <AccordionItem value="item-4" className="border-none py-4">
+                  <Link href="/" className="text-lg font-medium">
+                    Integráció
+                  </Link>
+                </AccordionItem>
+                <AccordionItem value="item-5" className="border-none py-4">
+                  <Link href="/" className="text-lg font-medium">
+                    Oktató anyagok
                   </Link>
                 </AccordionItem>
               </Accordion>
+              <div className="border-t border-primary-orange pt-4 flex flex-row justify-between h-fit w-full">
+                <a href="/">
+                  <Image src={facebook} alt="Social Icon" />
+                </a>
+                <a href="/">
+                  <Image src={threads} alt="Social Icon" />
+                </a>
+                <a href="/">
+                  <Image src={instagram} alt="Social Icon" />
+                </a>
+                <a href="/">
+                  <Image src={linkedin} alt="Social Icon" />
+                </a>
+              </div>
             </DrawerContent>
           </Drawer>
         ) : (

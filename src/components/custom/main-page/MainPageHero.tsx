@@ -44,7 +44,7 @@ export const MainPageHero = () => {
   return (
     <div className="w-full h-fit lg:h-screen bg-main-hero bg-fixed bg-cover bg-center flex flex-col lg:flex-row ">
       <div className="relative w-full h-screen lg:h-full lg:w-1/2 bg-white border-b border-primary-orange pb-16 lg:pb-0">
-        <div className="absolute bottom-6 w-full flex flex-col gap-3 justify-center items-center animate-fade-down animate-delay-[2000ms]">
+        <div className="absolute bottom-1 w-full flex flex-col gap-3 justify-center items-center animate-fade-down animate-delay-[2000ms]">
           <div className="flex flex-col gap-2 items-center animate-bounce animate-duration-1500 animate-ease-in-out">
             <span className="text-sm text-slate-300">Tudjon meg többet</span>
             <a
@@ -56,7 +56,7 @@ export const MainPageHero = () => {
           </div>
         </div>
         <div className="flex flex-row justify-center items-center w-full h-full">
-          <div className="w-1/2 flex flex-col items-start gap-10 max-w-[400px]">
+          <div className="w-2/3 lg:w-1/2 flex flex-col items-start gap-10 max-w-[400px]">
             <Image
               src={samLogo}
               alt="Simple Accounting Management"
@@ -67,22 +67,34 @@ export const MainPageHero = () => {
                 Könyvelés cégeknek - könnyen és egyszerűen.
               </h2>
             </div>
-            <div className="w-full border-primary-orange gap-8 flex justify-center lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-delay-[500ms] lg:animate-ease-in-out">
+            <div className="w-full border-primary-orange gap-8 hidden lg:flex justify-center lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-delay-[500ms] lg:animate-ease-in-out">
               <Button
                 variant={'secondary'}
                 size={'lg'}
-                className="flex flex-row items-center gap-4 shadow-lg"
+                className="flex flex-row items-center gap-4 shadow-lg !w-[200px]"
               >
                 Belépés
                 <LogIn />
               </Button>
             </div>
-            <div className="w-full flex flex-col lg:hidden items-center justify-center gap-2">
-              <a className="w-fit h-fit" href="/">
-                <Image src={getItInPlay} alt="Play Strore" className="w-[162px]" />
+            <div className="w-full flex flex-col md:flex-row lg:hidden items-center justify-center gap-2 md:gap-8">
+              <Button
+                variant={'secondary'}
+                size={'lg'}
+                className="flex flex-row items-center gap-4 shadow-lg !w-[200px] mb-1"
+              >
+                Belépés
+                <LogIn />
+              </Button>
+              <a className="w-fit h-fit flex items-center shadow-lg" href="/">
+                <Image
+                  src={getItInPlay}
+                  alt="Play Strore"
+                  className="w-[200px] sm:h-[57px] rounded-xl"
+                />
               </a>
-              <a className="w-fit h-fit" href="/">
-                <Image src={getItInApp} alt="App Strore" className="w-[250px]" />
+              <a className="w-fit h-fit shadow-lg" href="/">
+                <Image src={getItInApp} alt="App Strore" className="w-[200px] sm:h-[60px]" />
               </a>
             </div>
           </div>
