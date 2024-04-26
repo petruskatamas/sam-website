@@ -15,67 +15,55 @@ export const Footer = () => {
   return (
     <footer className="w-full">
       <div className="w-full border-t border-primary-orange max-w-screen-lg mx-auto flex flex-col px-8 lg:px-0 ">
-        <div className="w-full py-10 flex flex-col-reverse lg:flex-row-reverse justify-between">
-          <div className="w-full lg:w-fit h-full flex flex-row justify-between items-center">
-            <div className="w-full flex flex-col md:flex-row gap-10 justify-center  items-center">
-              <div className="w-[200px] flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
-                <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
-                  Rólunk
-                </h4>
-                <ul>
-                  <FooterListItem href={'#'}>Szolgáltatásunk</FooterListItem>
-                  <FooterListItem href={'#'}>Előnyök</FooterListItem>
-                </ul>
-              </div>
-              <div className="w-[200px] flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
-                <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
-                  Árak
-                </h4>
-                <ul>
-                  <FooterListItem href={'#'}>Könyvelőirodáknak</FooterListItem>
-                  <FooterListItem href={'#'}>Cégeknek</FooterListItem>
-                </ul>
-              </div>
-              <div className="w-[200px] flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
-                <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
-                  Segítség
-                </h4>
-                <ul>
-                  <FooterListItem href={'#'}>FAQ</FooterListItem>
-                  <FooterListItem href={'#'}>Integráció</FooterListItem>
-                  <FooterListItem href={'#'}>Segédlet</FooterListItem>
-                  <FooterListItem href={'#'}>Kapcsolat</FooterListItem>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-10">
           <div className="h-[187px] flex flex-col justify-center items-center">
             <Image src={samLogo} alt="Simple Accounting Management" className="w-[270px]" />
           </div>
-        </div>
-        <div className="w-full py-4 border-t border-primary-orange flex justify-center items-center">
-          <div className="w-full md:w-fit flex flex-col md:flex-row gap-4 items-center divide-y divide-x-0 md:divide-y-0 md:divide-x divide-slate-500">
-            <Link href={'#'} className="text-sm text-center hover:underline w-full md:w-fit">
-              ÁSZF
-            </Link>
-            <Link
-              href={'#'}
-              className="text-sm text-center hover:underline w-full md:w-fit pt-4 pl-0 md:pt-0 md:pl-4"
-            >
-              Adatvédelem
-            </Link>
-            <Link
-              href={'#'}
-              className="text-sm text-center hover:underline w-full md:w-fit pt-4 pl-0 md:pt-0 md:pl-4"
-            >
-              Felhasználási feltételek
-            </Link>
-            <Link
-              href={'#'}
-              className="text-sm text-center hover:underline w-full md:w-fit pt-4 pl-0 md:pt-0 md:pl-4"
-            >
-              Panaszkezelés
-            </Link>
+          <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
+            <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
+              Rólunk
+            </h4>
+            <ul>
+              <FooterListItem href={'#'}>Szolgáltatásunk</FooterListItem>
+              <FooterListItem href={'#'}>Előnyök</FooterListItem>
+            </ul>
+          </div>
+          <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
+            <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">Árak</h4>
+            <ul>
+              <FooterListItem href={'#'}>Könyvelőirodáknak</FooterListItem>
+              <FooterListItem href={'#'}>Cégeknek</FooterListItem>
+            </ul>
+          </div>
+          <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
+            <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
+              Segítség
+            </h4>
+            <ul>
+              <FooterListItem href={'#'}>FAQ</FooterListItem>
+              <FooterListItem href={'#'}>Integráció</FooterListItem>
+              <FooterListItem href={'#'}>Segédlet</FooterListItem>
+            </ul>
+          </div>
+          <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
+            <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
+              Kapcsolat
+            </h4>
+            <ul>
+              <FooterListItem href={'#'}>info@samaccounting.com</FooterListItem>
+              <FooterListItem href={'#'}>+36 20 XXX XXXX</FooterListItem>
+              <FooterListItem href={'#'}>Simple Accounting Management Kft.</FooterListItem>
+            </ul>
+          </div>
+          <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
+            <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
+              Dokumentumok
+            </h4>
+            <ul>
+              <FooterListItem href={'#'}>ÁSZF</FooterListItem>
+              <FooterListItem href={'#'}>Adatvédelem</FooterListItem>
+              <FooterListItem href={'#'}>Panaszkezelés</FooterListItem>
+            </ul>
           </div>
         </div>
       </div>

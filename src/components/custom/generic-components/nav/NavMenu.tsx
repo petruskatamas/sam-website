@@ -17,37 +17,6 @@ import threads from '@/images/icons/icons8-threads.svg'
 import instagram from '@/images/icons/icons8-instagram-48.png'
 import linkedin from '@/images/icons/icons8-linkedin.svg'
 
-const pricesMenu: { title: string; href: string; description: string }[] = [
-  {
-    title: 'Könyvelőirodák részére',
-    href: '/docs/primitives/alert-dialog',
-    description: 'Lépjen velünk kapcsolatba, hogy ügyfelei könyvelései is új szintre léphessenek!'
-  },
-  {
-    title: 'Cégek részére',
-    href: '/docs/primitives/hover-card',
-    description: 'Kezelje cége könyvelését könnyedén!'
-  }
-]
-
-const helpMenu: { title: string; href: string; description: string }[] = [
-  {
-    title: 'FAQ',
-    href: '/docs/primitives/alert-dialog',
-    description: 'Gyakran ismételt kérdések'
-  },
-  {
-    title: 'Integráció',
-    href: '/docs/primitives/hover-card',
-    description: 'Segiítség a már meglévő könyvelőprogramjának integrálásához'
-  },
-  {
-    title: 'Oktatás',
-    href: '/docs/primitives/hover-card',
-    description: 'Webinárium, letölthető anyagok, oktató videók'
-  }
-]
-
 export default function NavigationMenuDemo() {
   return (
     <NavigationMenu>
@@ -87,33 +56,26 @@ export default function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Árak</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[500px]">
-              {pricesMenu.map((component) => (
-                <ListItem key={component.title} title={component.title} href={component.href}>
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Árak</NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Segítség</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[500px] ">
-              {helpMenu.map((component) => (
-                <ListItem key={component.title} title={component.title} href={component.href}>
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>FAQ</NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Kapcsolat
+              Integráció
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Oktató anyagok
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

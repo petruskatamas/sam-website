@@ -92,8 +92,8 @@ export const MainPageAboutUsSection = () => {
           <Image src={aboutArtwork} alt="Artwork" className="w-full" />
         </div>
         <div className="w-full">
-          <div className="container pb-16">
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="pb-16">
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-8">
               <div className="relative lg:sticky top-0 lg:top-32 w-full lg:w-5/6 h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border">
                 <h2 className="border-b border-primary-orange pb-4 text-3xl font-semibold tracking-tight">
                   Újfajta kapcsolat könyvelőirodák és ügyfeleik között
@@ -105,7 +105,7 @@ export const MainPageAboutUsSection = () => {
                 </p>
                 <p className="mt-5">
                   <a
-                    className="inline-flex items-center text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
+                    className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
                     href="#"
                   >
                     Lépjen kapcsolatba a{' '}
@@ -119,13 +119,13 @@ export const MainPageAboutUsSection = () => {
                   </a>
                 </p>
               </div>
-              <div className="space-y-6 lg:space-y-10">
+              <div className="space-y-6 lg:space-y-10 px-2 lg:px-0">
                 <div className="flex group cursor-default">
                   <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full shadow-lg text-primary-orange group-hover:bg-primary-orange/90 group-hover:shadow-xl group-hover:text-white transition-all ease-in-out duration-300">
                     <EyeIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange/90">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange/90">
                       Egy jó SAM mindent lát
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -139,7 +139,7 @@ export const MainPageAboutUsSection = () => {
                     <QrCodeIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Egyszerűen, digitálisan
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -153,7 +153,7 @@ export const MainPageAboutUsSection = () => {
                     <TabletSmartphoneIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Mobilapplikáció
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -167,7 +167,7 @@ export const MainPageAboutUsSection = () => {
                     <AlarmClockCheckIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Időhatékony
                     </h3>
                     <p className="mt-1 text-muted-foreground">
@@ -181,7 +181,7 @@ export const MainPageAboutUsSection = () => {
                     <CloudUploadIcon className="flex-shrink-0 w-5 h-5" />
                   </span>
                   <div className="ml-5">
-                    <h3 className="text-base sm:text-lg font-semibold pb-2 border-b border-primary-orange">
+                    <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
                       Felhő alapú megoldás
                     </h3>
                     <p className="mt-1 text-muted-foreground">
