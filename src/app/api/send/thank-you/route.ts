@@ -1,21 +1,22 @@
 import { ThankYouEmailTemplate } from '@/components/email-templates/thank-you'
+import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   const values = await req.json()
-  try {
-    const data = await resend.emails.send({
-      from: 'SimpleAccounting <noreply@simpleaccounting.hu>',
-      to: values.email,
-      subject: 'Kapcsolatfelvételi értesítés',
-      react: ThankYouEmailTemplate({ company: values.company, person: values.person }),
-      text: ''
+  //@ts-ignore
+  const data = await resend.emails.send({
+    from: 'SimpleAccounting <noreply@resend.dev>',
+    // to: `${values.email}`,
+    to: 'support@simpleaccounting.hu',
+    subject: 'Kapcsolatfelvételi értesítés',
+    react: ThankYouEmailTemplate({
+      company: values.officeName ? values.officeName : values.companyName,
+      person: values.officePerson ? values.officePerson : values.companyPerson
     })
-
-    return Response.json(data)
-  } catch (error) {
-    return Response.json({ error })
-  }
+  })
+  console.log(data)
+  return NextResponse.json(data)
 }

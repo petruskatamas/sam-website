@@ -1,10 +1,18 @@
-import Image from 'next/image'
 import * as React from 'react'
 import navLogo from '@/images/sam-logo-small.png'
-import facebook from '@/images/icons/icons8-facebook (1).svg'
-import threads from '@/images/icons/icons8-threads.svg'
-import instagram from '@/images/icons/icons8-instagram-48.png'
-import linkedin from '@/images/icons/icons8-linkedin.svg'
+import {
+  Body,
+  Container,
+  Head,
+  Html,
+  Tailwind,
+  Text,
+  Img,
+  Link,
+  Hr,
+  Column,
+  Row
+} from '@react-email/components'
 
 interface InternalOfficeEmailTemplateProps {
   email: string
@@ -24,55 +32,135 @@ export const InternalOfficeEmailTemplate: React.FC<Readonly<InternalOfficeEmailT
   numOfCompanies,
   usedPrograms,
   note
-}) => (
-  <main className="w-full max-w-screen-lg mx-auto flex items-center bg-white">
-    <div className="w-full flex flex-row justify-between items-end py-6 border-b border-primary-orange">
-      <a href={'https://www.google.com'}>
-        <Image src={navLogo} alt="SAM Logo" className="h-10 w-9" />
-      </a>
-      <span className="font-bold text-3xl">Kapcsolatfelvétel - Könyvelőiroda</span>
-    </div>
-    <div className="w-full flex flex-col py-6 gap-4">
-      <h1 className="font-bold text-2xl">Kedves SAM Munkatárs,</h1>
-      <p className="text-base">
-        Az alábbi kapcsolatfelvételi adatok érkeztek be hozzánk a weboldalunkról:
-      </p>
-      <ul className="w-full flex flex-col gap-2 list-disc">
-        <li className="text-base">
-          Könyvelőiroda neve: <strong>{officeName}</strong>
-        </li>
-        <li className="text-base">
-          Kapcsolattartó személy neve: <strong>{officePerson}</strong>
-        </li>
-        <li className="text-base">
-          Email: <strong>{email}</strong>
-        </li>
-        <li className="text-base">
-          Telefonszám: <strong>{phone}</strong>
-        </li>
-        <li className="text-base">
-          Kezelt cégek száma: <strong>{numOfCompanies}</strong>
-        </li>
-        <li className="text-base">
-          Használt könyvelőprogram(ok): <strong>{usedPrograms}</strong>
-        </li>
-        <li className="text-base">Megjegyzés: {note}</li>
-      </ul>
-      <p className="text-sm">Sikeres értékesítést!</p>
-    </div>
-    <div className="w-full flez justify-center gap-6 items-center py-6 border-t border-primary-orange">
-      <a href="/">
-        <Image src={facebook} alt="Facebook Icon" className="h-5 w-5" />
-      </a>
-      <a href="/">
-        <Image src={threads} alt="Threads Icon" className="h-5 w-5" />
-      </a>
-      <a href="/">
-        <Image src={instagram} alt="Instagram Icon" className="h-5 w-5" />
-      </a>
-      <a href="/">
-        <Image src={linkedin} alt="Linkedin Icon" className="h-5 w-5" />
-      </a>
-    </div>
-  </main>
-)
+}) => {
+  return (
+    <Html>
+      <Head />
+      <Body style={main}>
+        <Tailwind>
+          <Container style={container}>
+            <Img src={navLogo.src} width="50" height="50" alt="SAM Logo" style={logo} />
+            <Hr style={hr} />
+            <Text style={paragraph}>Kapcsolatfelvételi adatok a SAM weboldaláról</Text>
+            <Text style={paragraph}>
+              Email: {email}
+              <br />
+              Telefon: {phone}
+              <br />
+              Cég neve: {officeName}
+              <br />
+              Kapcsolattartó személy: {officePerson}
+              <br />
+              Kezelt cégek száma: {numOfCompanies}
+              <br />
+              Használt könyvelőprogramokÉ {usedPrograms}
+              <br />
+              Megjegyzés: {note}
+              <br />
+            </Text>
+            <Text style={paragraph} className="text-sm">
+              Ez egy automatikus üzenet, ne válaszoljon rá.
+            </Text>
+            <Hr style={hr} />
+            <Text style={footer}>
+              <Link href="https://www.simpleaccounting.hu" className="text-[#8898aa] underline">
+                simpleaccounting.hu
+              </Link>
+              <br />
+              <Link href="mailto:support@simpleaccounting.hu" className="text-[#8898aa] underline">
+                support@simpleaccounting.hu
+              </Link>
+              <br />
+              +36 20 XXX XX XX
+              <br />
+              1167 Budapest, XY utca 5.
+            </Text>
+            <Row>
+              <Column align="left">
+                <Link href="https://google.com">
+                  <Img
+                    src={
+                      'https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png'
+                    }
+                    alt="Social Media"
+                    width="20"
+                    height="20"
+                    className="inline-block"
+                  />
+                </Link>
+                <Link href="https://google.com">
+                  <Img
+                    src={
+                      'https://upload.wikimedia.org/wikipedia/commons/d/db/Threads_%28app%29.png'
+                    }
+                    alt="Social Media"
+                    width="20"
+                    height="20"
+                    style={socialMedia}
+                  />
+                </Link>
+                <Link href="https://google.com">
+                  <Img
+                    src={
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png'
+                    }
+                    alt="Social Media"
+                    width="20"
+                    height="20"
+                    style={socialMedia}
+                  />
+                </Link>
+                <Link href="https://google.com">
+                  <Img
+                    src={
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png'
+                    }
+                    alt="Social Media"
+                    width="20"
+                    height="20"
+                    style={socialMedia}
+                  />
+                </Link>
+              </Column>
+            </Row>
+          </Container>
+        </Tailwind>
+      </Body>
+    </Html>
+  )
+}
+
+const main = {
+  backgroundColor: '#ffffff',
+  fontFamily:
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif'
+}
+
+const container = {
+  margin: '0 auto',
+  padding: '20px 0 48px'
+}
+
+const logo = {
+  margin: '0 auto'
+}
+
+const paragraph = {
+  fontSize: '16px',
+  lineHeight: '26px'
+}
+
+const hr = {
+  borderColor: '#f8673a',
+  margin: '20px 0'
+}
+
+const footer = {
+  color: '#8898aa',
+  fontSize: '12px'
+}
+
+const socialMedia = {
+  display: 'inline-block',
+  marginLeft: '10px'
+}

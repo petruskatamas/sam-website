@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -21,13 +21,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import samLogo from '@/images/sam-logo-small.svg'
 
-//TODO: write resend handlers here and in route.ts too
+// TODO: Add toast popup for feedback
 
 const phoneRegex = /^\+3620|^\+3630|^\+3670|^\+361|^\+3631/
-
-const onCompanySubmit = (values: z.infer<typeof companyFormSchema>) => {
-  console.log(values)
-}
 
 const companyFormSchema = z.object({
   email: z.string().email({
@@ -62,6 +58,22 @@ const CompanyFormComponent = () => {
       newsletter: false
     }
   })
+
+  const onCompanySubmit = async (values: z.infer<typeof companyFormSchema>) => {
+    try {
+      const response = await fetch('/api/send/thank-you', {
+        method: 'POST',
+        body: JSON.stringify(values)
+      })
+      return response
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    form.formState.isSubmitSuccessful && form.reset(form.formState.defaultValues)
+  }, [form.formState.isSubmitSuccessful, form])
 
   return (
     <Form {...form}>
@@ -185,10 +197,6 @@ const CompanyFormComponent = () => {
   )
 }
 
-const onOfficeSubmit = (values: z.infer<typeof officeFormSchema>) => {
-  console.log(values)
-}
-
 const officeFormSchema = z.object({
   email: z.string().email({
     message: 'Érvénytelen e-mail cím!'
@@ -227,6 +235,23 @@ const OfficeFormComponent = () => {
       newsletter: false
     }
   })
+
+  const onOfficeSubmit = async (values: z.infer<typeof officeFormSchema>) => {
+    try {
+      const response = await fetch('/api/send/thank-you', {
+        method: 'POST',
+        body: JSON.stringify(values)
+      })
+      return response
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    form.formState.isSubmitSuccessful && form.reset(form.formState.defaultValues)
+  }, [form.formState.isSubmitSuccessful, form])
+
   return (
     <Form {...form}>
       <form
