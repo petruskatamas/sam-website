@@ -41,7 +41,9 @@ export const InternalOfficeEmailTemplate: React.FC<Readonly<InternalOfficeEmailT
           <Container style={container}>
             <Img src={navLogo.src} width="50" height="50" alt="SAM Logo" style={logo} />
             <Hr style={hr} />
-            <Text style={paragraph}>Kapcsolatfelvételi adatok a SAM weboldaláról</Text>
+            <Text style={paragraph}>
+              Kapcsolatfelvételi adatok a SAM weboldaláról - Könyvelőiroda
+            </Text>
             <Text style={paragraph}>
               Email: {email}
               <br />
@@ -53,7 +55,7 @@ export const InternalOfficeEmailTemplate: React.FC<Readonly<InternalOfficeEmailT
               <br />
               Kezelt cégek száma: {numOfCompanies}
               <br />
-              Használt könyvelőprogramokÉ {usedPrograms}
+              Használt könyvelőprogramok: {usedPrograms}
               <br />
               Megjegyzés: {note}
               <br />

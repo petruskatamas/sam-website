@@ -33,7 +33,7 @@ export const InternalCompanyEmailTemplate: React.FC<
           <Container style={container}>
             <Img src={navLogo.src} width="50" height="50" alt="SAM Logo" style={logo} />
             <Hr style={hr} />
-            <Text style={paragraph}>Kapcsolatfelvételi adatok a SAM weboldaláról</Text>
+            <Text style={paragraph}>Kapcsolatfelvételi adatok a SAM weboldaláról - Cég</Text>
             <Text style={paragraph}>
               Email: {email}
               <br />

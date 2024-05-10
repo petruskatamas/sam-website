@@ -54,6 +54,7 @@ const CompanyFormComponent = () => {
       phone: '',
       companyPerson: '',
       companyName: '',
+      note: '',
       terms: false,
       newsletter: false
     }
@@ -61,11 +62,19 @@ const CompanyFormComponent = () => {
 
   const onCompanySubmit = async (values: z.infer<typeof companyFormSchema>) => {
     try {
-      const response = await fetch('/api/send/thank-you', {
+      const result = await fetch('/api/send/internal/company', {
         method: 'POST',
         body: JSON.stringify(values)
       })
-      return response
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          return fetch('/api/send/thank-you', {
+            method: 'POST',
+            body: JSON.stringify(values)
+          }).then((res) => res.json())
+        })
+      return result
     } catch (error) {
       console.log(error)
     }
@@ -238,11 +247,19 @@ const OfficeFormComponent = () => {
 
   const onOfficeSubmit = async (values: z.infer<typeof officeFormSchema>) => {
     try {
-      const response = await fetch('/api/send/thank-you', {
+      const result = await fetch('/api/send/internal/office', {
         method: 'POST',
         body: JSON.stringify(values)
       })
-      return response
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          return fetch('/api/send/thank-you', {
+            method: 'POST',
+            body: JSON.stringify(values)
+          }).then((res) => res.json())
+        })
+      return result
     } catch (error) {
       console.log(error)
     }

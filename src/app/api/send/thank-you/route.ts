@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     from: 'SimpleAccounting <noreply@resend.dev>',
     // to: `${values.email}`,
     to: 'support@simpleaccounting.hu',
-    subject: 'Kapcsolatfelvételi értesítés',
+    subject: 'Simple Accounting - Kapcsolatfelvételi értesítés',
     react: ThankYouEmailTemplate({
       company: values.officeName ? values.officeName : values.companyName,
       person: values.officePerson ? values.officePerson : values.companyPerson
