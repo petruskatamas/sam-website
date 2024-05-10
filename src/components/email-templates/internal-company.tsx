@@ -22,6 +22,8 @@ interface InternalCompanyEmailTemplateProps {
   note: string
 }
 
+//TODO: solve import issue
+
 export const InternalCompanyEmailTemplate: React.FC<
   Readonly<InternalCompanyEmailTemplateProps>
 > = ({ email, phone, companyPerson, companyName, note }) => {

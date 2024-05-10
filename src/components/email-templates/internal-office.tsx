@@ -24,6 +24,8 @@ interface InternalOfficeEmailTemplateProps {
   note: string
 }
 
+//TODO: solve import issue
+
 export const InternalOfficeEmailTemplate: React.FC<Readonly<InternalOfficeEmailTemplateProps>> = ({
   email,
   phone,

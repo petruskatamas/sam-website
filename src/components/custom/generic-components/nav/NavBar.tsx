@@ -44,32 +44,22 @@ export const NavBar = () => {
                 <AccordionItem value="item-1" className="border-none">
                   <AccordionTrigger className="decoration-transparent">Rólunk</AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 pl-4">
-                    <Link href="/" className="text-lg">
+                    <Link href="#about-1" className="text-lg">
                       Szolgáltatásunk
                     </Link>
-                    <Link href="/" className="text-lg">
+                    <Link href="#about-2" className="text-lg">
                       Előnyök
                     </Link>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
+                  <Link href="#pricing" className="text-lg font-medium">
                     Árak
                   </Link>
                 </AccordionItem>
                 <AccordionItem value="item-3" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
+                  <Link href="#faq" className="text-lg font-medium">
                     FAQ
-                  </Link>
-                </AccordionItem>
-                <AccordionItem value="item-4" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
-                    Integráció
-                  </Link>
-                </AccordionItem>
-                <AccordionItem value="item-5" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
-                    Oktató anyagok
                   </Link>
                 </AccordionItem>
               </Accordion>

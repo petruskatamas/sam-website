@@ -46,37 +46,23 @@ export default function NavigationMenuDemo() {
                   </div>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Szolgáltatásunk">
+              <ListItem href="#about-1" title="Szolgáltatásunk">
                 Ismerkedj meg a SAM-el!
               </ListItem>
-              <ListItem href="/docs/installation" title="Előnyök">
+              <ListItem href="#about-2" title="Előnyök">
                 Miért a SAM a tökéletes választás?
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="#pricing" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>Árak</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="#faq" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>FAQ</NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Integráció
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Oktató anyagok
-            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>

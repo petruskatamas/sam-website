@@ -13,7 +13,10 @@ const ListItem = ({ children }: { children: ReactNode }) => {
 
 export const MainPagePros = () => {
   return (
-    <div className="w-full h-fit lg:h-screen bg-pros-hero bg-fixed bg-repeat">
+    <div
+      id="about-2"
+      className="scroll-mt-12 w-full h-fit lg:h-screen bg-pros-hero bg-fixed bg-repeat"
+    >
       <div className="w-full h-full bg-black/30 backdrop-blur-lg flex justify-center items-center py-8 px-4 md:px-8 lg:px-0 lg:py-0">
         <div className="w-fit lg:w-full max-w-screen-lg h-3/4 bg-white shadow-xl rounded-lg p-6 lg:p-10 flex flex-row">
           <div className="w-full lg:w-[55%] h-full flex flex-col gap-8 justify-center items-start">

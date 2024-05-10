@@ -9,7 +9,7 @@ const PricingTabs = () => {
   return (
     <div className="w-full h-fit">
       <Tabs
-        defaultValue="company"
+        defaultValue="office"
         className="w-full h-full flex flex-col justify-between items-center gap-6"
       >
         <TabsList>
@@ -29,7 +29,10 @@ const PricingTabs = () => {
 
 export const MainPagePricing = () => {
   return (
-    <div className="w-full h-fit lg:h-[800px] py-16 lg:py-32 bg-white px-4 md:px-8 lg:px-0">
+    <div
+      id="pricing"
+      className="scroll-mt-12 w-full h-fit lg:h-[800px] py-16 lg:py-32 bg-white px-4 md:px-8 lg:px-0"
+    >
       <div className="w-full h-full max-w-screen-lg mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-24 items-start">
         <div className="w-full md:w-1/2 h-full flex flex-col justify-center gap-6">
           <h2 className="border-b border-primary-orange pb-6">Árak</h2>

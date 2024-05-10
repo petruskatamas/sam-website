@@ -9,8 +9,9 @@ export async function POST(req: NextRequest) {
   //@ts-ignore
   const data = await resend.emails.send({
     from: 'SimpleAccounting <noreply@resend.dev>',
-    // to: `${values.email}`,
-    to: 'support@simpleaccounting.hu',
+    to: `${values.email}`,
+    // for testing use below
+    // to: 'support@simpleaccounting.hu',
     subject: 'Simple Accounting - Kapcsolatfelvételi értesítés',
     react: ThankYouEmailTemplate({
       company: values.officeName ? values.officeName : values.companyName,

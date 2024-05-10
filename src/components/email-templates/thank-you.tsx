@@ -20,6 +20,8 @@ interface ThankYouEmailTemplateProps {
   person: string
 }
 
+//TODO: solve import issue
+
 export const ThankYouEmailTemplate: React.FC<Readonly<ThankYouEmailTemplateProps>> = ({
   person,
   company
