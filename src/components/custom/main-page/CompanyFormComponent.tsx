@@ -28,8 +28,12 @@ const companyFormSchema = z.object({
   phone: z.string().refine((data) => phoneRegex.test(data), {
     message: 'Érvénytelen telefonszám!'
   }),
-  companyName: z.string(),
-  companyPerson: z.string(),
+  companyName: z.string().refine((data) => data != '', {
+    message: 'Kötelező!'
+  }),
+  companyPerson: z.string().refine((data) => data != '', {
+    message: 'Érvénytelen telefonszám!'
+  }),
   note: z
     .string()
     .max(200, {
