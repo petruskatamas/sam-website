@@ -24,15 +24,15 @@ export const Footer = () => {
               Rólunk
             </h4>
             <ul>
-              <FooterListItem href={'#'}>Szolgáltatásunk</FooterListItem>
-              <FooterListItem href={'#'}>Előnyök</FooterListItem>
+              <FooterListItem href={'#about-1'}>Szolgáltatásunk</FooterListItem>
+              <FooterListItem href={'#about-2'}>Előnyök</FooterListItem>
             </ul>
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
             <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">Árak</h4>
             <ul>
-              <FooterListItem href={'#'}>Könyvelőirodáknak</FooterListItem>
-              <FooterListItem href={'#'}>Cégeknek</FooterListItem>
+              <FooterListItem href={'#pricing'}>Könyvelőirodáknak</FooterListItem>
+              <FooterListItem href={'#pricing'}>Cégeknek</FooterListItem>
             </ul>
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
@@ -40,9 +40,7 @@ export const Footer = () => {
               Segítség
             </h4>
             <ul>
-              <FooterListItem href={'#'}>FAQ</FooterListItem>
-              <FooterListItem href={'#'}>Integráció</FooterListItem>
-              <FooterListItem href={'#'}>Segédlet</FooterListItem>
+              <FooterListItem href={'#faq'}>FAQ</FooterListItem>
             </ul>
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
@@ -50,9 +48,11 @@ export const Footer = () => {
               Kapcsolat
             </h4>
             <ul>
-              <FooterListItem href={'#'}>info@samaccounting.com</FooterListItem>
+              <FooterListItem href={'mailto:support@simpleaccounting.hu'}>
+                support@simpleaccounting.hu
+              </FooterListItem>
               <FooterListItem href={'#'}>+36 20 XXX XXXX</FooterListItem>
-              <FooterListItem href={'#'}>Simple Accounting Management Kft.</FooterListItem>
+              <FooterListItem href={'#'}>Simple Accounting Kft.</FooterListItem>
             </ul>
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">

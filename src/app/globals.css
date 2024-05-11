@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-    @apply text-base scroll-smooth
+    @apply text-base !scroll-smooth
 }
 
 h1 {

@@ -6,17 +6,18 @@ import NavMenu from './NavMenu'
 import Link from 'next/link'
 import { useMediaQuery } from '@/hooks/useMediaQuerry'
 import { MenuIcon } from 'lucide-react'
-import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from '@/components/ui/accordion'
 import facebook from '@/images/icons/icons8-facebook (1).svg'
 import threads from '@/images/icons/icons8-threads.svg'
 import instagram from '@/images/icons/icons8-instagram-48.png'
 import linkedin from '@/images/icons/icons8-linkedin.svg'
+import {
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuLink
+} from '@/components/ui/navigation-menu'
+import { cn } from '@/lib/utils'
+import { NavigationMenu } from '@/components/ui/navigation-menu'
 
 export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -35,60 +36,41 @@ export const NavBar = () => {
       </Link>
       <div className="w-fit flex flex-row items-center gap-1">
         {!isDesktop ? (
-          <Drawer direction="top">
-            <DrawerTrigger>
-              <MenuIcon className="w-6 h-6" />
-            </DrawerTrigger>
-            <DrawerContent>
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1" className="border-none">
-                  <AccordionTrigger className="decoration-transparent">Rólunk</AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 pl-4">
-                    <Link href="/" className="text-lg">
-                      Szolgáltatásunk
-                    </Link>
-                    <Link href="/" className="text-lg">
-                      Előnyök
-                    </Link>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
-                    Árak
-                  </Link>
-                </AccordionItem>
-                <AccordionItem value="item-3" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
-                    FAQ
-                  </Link>
-                </AccordionItem>
-                <AccordionItem value="item-4" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
-                    Integráció
-                  </Link>
-                </AccordionItem>
-                <AccordionItem value="item-5" className="border-none py-4">
-                  <Link href="/" className="text-lg font-medium">
-                    Oktató anyagok
-                  </Link>
-                </AccordionItem>
-              </Accordion>
-              <div className="border-t border-primary-orange pt-4 flex flex-row justify-between h-fit w-full">
-                <a href="/">
-                  <Image src={facebook} alt="Social Icon" />
-                </a>
-                <a href="/">
-                  <Image src={threads} alt="Social Icon" />
-                </a>
-                <a href="/">
-                  <Image src={instagram} alt="Social Icon" />
-                </a>
-                <a href="/">
-                  <Image src={linkedin} alt="Social Icon" />
-                </a>
-              </div>
-            </DrawerContent>
-          </Drawer>
+          <NavigationMenu className="list-none">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                <MenuIcon className="w-6 h-6" />
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-6 w-[350px] lg:grid-cols-[.7fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <div className="w-fit h-full flex flex-col justify-start items-center gap-2">
+                        <div className="flex flex-row gap-4 h-fit w-fit">
+                          <a href="/">
+                            <Image src={facebook} alt="Social Icon" />
+                          </a>
+                          <a href="/">
+                            <Image src={threads} alt="Social Icon" />
+                          </a>
+                          <a href="/">
+                            <Image src={instagram} alt="Social Icon" />
+                          </a>
+                          <a href="/">
+                            <Image src={linkedin} alt="Social Icon" />
+                          </a>
+                        </div>
+                      </div>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem href="#about-1" title="Szolgáltatásunk" />
+                  <ListItem href="#about-2" title="Előnyök" />
+                  <ListItem href="#pricing" title="Árak" />
+                  <ListItem href="#faq" title="FAQ" />
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenu>
         ) : (
           <NavMenu />
         )}
@@ -96,3 +78,26 @@ export const NavBar = () => {
     </nav>
   )
 }
+
+const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
+  ({ className, title, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            ref={ref}
+            className={cn(
+              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary-orange hover:text-white focus:bg-primary-orange focus:text-white',
+              className
+            )}
+            {...props}
+          >
+            <div className="text-xl font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    )
+  }
+)
+ListItem.displayName = 'ListItem'
