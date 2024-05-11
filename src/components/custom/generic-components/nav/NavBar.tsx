@@ -18,11 +18,12 @@ import {
 } from '@/components/ui/navigation-menu'
 import { cn } from '@/lib/utils'
 import { NavigationMenu } from '@/components/ui/navigation-menu'
+import { useWindowSize } from '@/hooks/useWindowSize'
 
 export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false)
   const handleScroll = () => setScrolled(window.scrollY > 50)
-  const mobileNavMenuWidth = window.innerWidth - 64
+  const mobileNavMenuWidth = useWindowSize()
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -44,7 +45,7 @@ export const NavBar = () => {
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul
-                  className={`grid gap-3 p-6 max-w-[${mobileNavMenuWidth}px] w-[768px] lg:grid-cols-[.7fr_1fr]`}
+                  className={`grid gap-3 p-6 max-w-[${mobileNavMenuWidth.width}px] w-[768px] lg:grid-cols-[.7fr_1fr]`}
                 >
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
