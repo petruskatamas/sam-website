@@ -9,6 +9,10 @@ const config = {
     './src/**/*.{ts,tsx}'
   ],
   prefix: '',
+  safelist: [
+    // @ts-ignore
+    ...[...Array(768).keys()].flatMap((i) => [`max-w-[${i * 1}px]`])
+  ],
   theme: {
     container: {
       center: true,

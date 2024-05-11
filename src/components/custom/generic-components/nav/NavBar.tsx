@@ -22,6 +22,7 @@ import { NavigationMenu } from '@/components/ui/navigation-menu'
 export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false)
   const handleScroll = () => setScrolled(window.scrollY > 50)
+  const mobileNavMenuWidth = window.innerWidth - 64
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -42,10 +43,12 @@ export const NavBar = () => {
                 <MenuIcon className="w-6 h-6" />
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 w-[350px] lg:grid-cols-[.7fr_1fr]">
+                <ul
+                  className={`grid gap-3 p-6 max-w-[${mobileNavMenuWidth}px] w-[768px] lg:grid-cols-[.7fr_1fr]`}
+                >
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <div className="w-fit h-full flex flex-col justify-start items-center gap-2">
+                      <div className="w-full h-full flex flex-col justify-center items-center gap-2">
                         <div className="flex flex-row gap-4 h-fit w-fit">
                           <a href="/">
                             <Image src={facebook} alt="Social Icon" />
@@ -63,10 +66,18 @@ export const NavBar = () => {
                       </div>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="#about-1" title="Szolgáltatásunk" />
-                  <ListItem href="#about-2" title="Előnyök" />
-                  <ListItem href="#pricing" title="Árak" />
-                  <ListItem href="#faq" title="FAQ" />
+                  <ListItem
+                    className="w-full flex justify-center"
+                    href="#about-1"
+                    title="Szolgáltatásunk"
+                  />
+                  <ListItem
+                    className="w-full flex justify-center"
+                    href="#about-2"
+                    title="Előnyök"
+                  />
+                  <ListItem className="w-full flex justify-center" href="#pricing" title="Árak" />
+                  <ListItem className="w-full flex justify-center" href="#faq" title="FAQ" />
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>

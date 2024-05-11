@@ -65,8 +65,8 @@ const CompanyFormComponent = () => {
         body: JSON.stringify(values)
       })
         .then((res) => res.json())
+        // eslint-disable-next-line no-unused-vars
         .then((data) => {
-          console.log(data)
           return fetch('/api/send/thank-you', {
             method: 'POST',
             body: JSON.stringify(values)
@@ -74,7 +74,6 @@ const CompanyFormComponent = () => {
         })
       return result
     } catch (error) {
-      console.log(error)
       toast({
         variant: 'destructive',
         title: 'Váratlan hiba!',
