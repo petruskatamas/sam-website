@@ -48,7 +48,7 @@ export const MainPageHero = () => {
           <div className="flex flex-col gap-2 items-center animate-bounce animate-duration-1500 animate-ease-in-out">
             <span className="text-sm text-slate-300">Tudjon meg többet</span>
             <a
-              href="#about-us"
+              href="#about-1"
               className="p-2 rounded-full w-fit bg-white shadow-lg border-slate-200 border"
             >
               <ArrowDownIcon className="text-slate-300" />

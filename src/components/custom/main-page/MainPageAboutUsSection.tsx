@@ -15,7 +15,7 @@ import samLogo from '@/images/sam-logo-small.svg'
 
 export const MainPageAboutUsSection = () => {
   return (
-    <section id="about-1" className="w-full bg-white px-4 md:px-8 lg:px-0">
+    <section id="about-1" className="scroll-mt-12 w-full bg-white px-4 md:px-8 lg:px-0">
       <div className='className="w-full max-w-screen-lg mx-auto flex flex-col gap-10'>
         <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-16 pt-16 lg:pt-32">
           <div className="container p-8 shadow-lg rounded-lg border-slate-200/50 border">
