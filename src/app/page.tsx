@@ -1,4 +1,5 @@
 import { MainPageAboutUsSection } from '@/components/custom/main-page/MainPageAboutUsSection'
+import MainPageContact from '@/components/custom/main-page/MainPageContact'
 import { MainPageHelpSection } from '@/components/custom/main-page/MainPageHelpSection'
 import { MainPageHero } from '@/components/custom/main-page/MainPageHero'
 import { MainPagePricing } from '@/components/custom/main-page/MainPagePricing'
@@ -12,6 +13,7 @@ export default function Home() {
       <MainPagePros />
       <MainPagePricing />
       <MainPageHelpSection />
+      <MainPageContact />
     </>
   )
 }

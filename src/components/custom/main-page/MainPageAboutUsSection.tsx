@@ -64,8 +64,8 @@ export const MainPageAboutUsSection = () => {
                     <QrCodeIcon className="flex-shrink-0 mt-2 h-10 w-10" />
                     <div className="ms-5 sm:ms-8">
                       <p className="mt-1 text-muted-foreground">
-                        Digitális fejlesztéssel a környezeti terhelést már rövid távon is
-                        csökkenteni lehet
+                        A digitális fejlesztések bevezetésével már rövid távon is jelentős mértékben
+                        csökkenthető a környezeti terhelés.
                       </p>
                     </div>
                   </div>
@@ -73,14 +73,15 @@ export const MainPageAboutUsSection = () => {
                     <CloudUploadIcon className="flex-shrink-0 mt-2 h-10 w-10" />
                     <div className="ms-5 sm:ms-8">
                       <p className="mt-1 text-muted-foreground">
-                        Felhő alapú megoldások használata
+                        A felhő alapú megoldások használata költséghatékonyabb, hozzájárul a
+                        fenntartható működéshez és a terhelés csökkentéséhez.
                       </p>
                     </div>
                   </div>
                   <div>
                     <h3 className="text-lg font-bold border-t pt-8 border-primary-orange">
-                      Digitális fejlesztéssel a környezeti terhelést már rövid távon is csökkenteni
-                      lehet!
+                      Az innovatív technológiák alkalmazása lehetővé teszi a vállalatok és egyének
+                      számára, hogy hatékonyabban működjenek.
                     </h3>
                   </div>
                 </div>
@@ -157,7 +158,7 @@ export const MainPageAboutUsSection = () => {
                       Mobilapplikáció
                     </h3>
                     <p className="mt-1 text-muted-foreground">
-                      Feltültéssel azonnal a könyvelő rendelkezésére tudjuk bocsátani a könyveléshez
+                      Feltöltéssel azonnal a könyvelő rendelkezésére tudjuk bocsátani a könyveléshez
                       elengedhetetlen számlát.
                     </p>
                   </div>

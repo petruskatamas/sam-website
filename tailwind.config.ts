@@ -11,7 +11,7 @@ const config = {
   prefix: '',
   safelist: [
     // @ts-ignore
-    ...[...Array(768).keys()].flatMap((i) => [`max-w-[${i * 1}px]`])
+    ...[...Array(768).keys()].flatMap((i) => [`w-[${i * 1}px]`])
   ],
   theme: {
     container: {

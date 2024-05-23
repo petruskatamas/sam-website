@@ -46,10 +46,10 @@ export default function NavigationMenuDemo() {
                   </div>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="#about-1" title="Szolgáltatásunk">
+              <ListItem href="#about-1" title="Használati előnyök">
                 Ismerkedj meg a SAM-el!
               </ListItem>
-              <ListItem href="#about-2" title="Előnyök">
+              <ListItem href="#about-2" title="Technikai megoldások">
                 Miért a SAM a tökéletes választás?
               </ListItem>
             </ul>
@@ -63,6 +63,13 @@ export default function NavigationMenuDemo() {
         <NavigationMenuItem>
           <Link href="#faq" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>FAQ</NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="#contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Kapcsolat
+            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>

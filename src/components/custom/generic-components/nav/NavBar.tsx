@@ -45,7 +45,7 @@ export const NavBar = () => {
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul
-                  className={`grid gap-3 p-6 max-w-[${mobileNavMenuWidth.width}px] w-[768px] lg:grid-cols-[.7fr_1fr]`}
+                  className={`grid gap-3 p-6 w-[${mobileNavMenuWidth.width - 64}px] lg:grid-cols-[.7fr_1fr]`}
                 >
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
@@ -79,6 +79,11 @@ export const NavBar = () => {
                   />
                   <ListItem className="w-full flex justify-center" href="#pricing" title="Árak" />
                   <ListItem className="w-full flex justify-center" href="#faq" title="FAQ" />
+                  <ListItem
+                    className="w-full flex justify-center"
+                    href="#contact"
+                    title="Kapcsolat"
+                  />
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>

@@ -46,12 +46,9 @@ export const MainPageHero = () => {
       <div className="relative w-full h-screen lg:h-full lg:w-1/2 bg-white border-b border-primary-orange pb-16 lg:pb-0">
         <div className="absolute bottom-1 w-full flex flex-col gap-3 justify-center items-center animate-fade-down animate-delay-[2000ms]">
           <div className="flex flex-col gap-2 items-center animate-bounce animate-duration-1500 animate-ease-in-out">
-            <span className="text-sm text-slate-300">Tudjon meg többet</span>
-            <a
-              href="#about-1"
-              className="p-2 rounded-full w-fit bg-white shadow-lg border-slate-200 border"
-            >
-              <ArrowDownIcon className="text-slate-300" />
+            <span className="text-sm text-primary-orange">Tudjon meg többet</span>
+            <a href="#about-1" className="p-2 rounded-full w-fit bg-primary-orange shadow-lg">
+              <ArrowDownIcon className="text-white" />
             </a>
           </div>
         </div>
@@ -64,7 +61,7 @@ export const MainPageHero = () => {
             />
             <div className="w-full">
               <h2 className="w-full text-center font-medium text-base border-t border-b border-primary-orange py-4">
-                Könyvelés cégeknek - könnyen és egyszerűen.
+                Könyvelés támogató rendszer
               </h2>
             </div>
             <div className="w-full border-primary-orange gap-8 hidden lg:flex justify-center lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-delay-[500ms] lg:animate-ease-in-out">

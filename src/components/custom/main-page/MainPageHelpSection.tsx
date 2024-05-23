@@ -8,10 +8,7 @@ import {
 
 export const MainPageHelpSection = () => {
   return (
-    <div
-      id="faq"
-      className="scroll-mt-32 w-full max-w-screen-lg mx-auto pb-24 flex flex-col gap-16 px-8"
-    >
+    <div id="faq" className="scroll-mt-32 w-full max-w-screen-lg mx-auto flex flex-col gap-16 px-8">
       <h2 className="w-full text-center border-b border-primary-orange pb-8">
         Gyakran ismételt kérdések
       </h2>
