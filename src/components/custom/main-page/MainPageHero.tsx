@@ -74,7 +74,7 @@ export const MainPageHero = () => {
                 <LogIn />
               </Button>
             </div>
-            <div className="w-full flex flex-col md:flex-row lg:hidden items-center justify-center gap-2 md:gap-8">
+            <div className="w-full flex flex-col lg:flex-row lg:hidden items-center justify-center gap-2 md:gap-8">
               <Button
                 variant={'secondary'}
                 size={'lg'}
@@ -97,7 +97,7 @@ export const MainPageHero = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block w-1/2 h-full bg-black/25 backdrop-blur-lg">
+      <div className="hidden md:block w-1/2 h-full bg-black/25 backdrop-blur-lg">
         <div className="flex flex-row justify-center items-center w-full h-full">
           <div className="w-fit flex flex-col md:flex-row gap-12 mx-auto items-start">
             <HeroCard
