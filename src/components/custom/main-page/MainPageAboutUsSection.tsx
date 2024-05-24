@@ -107,7 +107,7 @@ export const MainPageAboutUsSection = () => {
                 <p className="mt-5">
                   <a
                     className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
-                    href="#pricing"
+                    href="#contact"
                   >
                     Lépjen kapcsolatba a{' '}
                     <Image

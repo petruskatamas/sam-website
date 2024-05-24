@@ -51,7 +51,7 @@ export const Footer = () => {
               <FooterListItem href={'mailto:support@simpleaccounting.hu'}>
                 support@simpleaccounting.hu
               </FooterListItem>
-              <FooterListItem href={'#'}>+36 20 XXX XXXX</FooterListItem>
+              <FooterListItem href={'tel:+3614433320'}>+36 1 443 3320</FooterListItem>
               <FooterListItem href={'#'}>Simple Accounting Kft.</FooterListItem>
             </ul>
           </div>

@@ -14,6 +14,7 @@ import {
   FormMessage
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import { Switch } from '@/components/ui/switch'
 import { SendHorizonalIcon } from 'lucide-react'
 import Link from 'next/link'
@@ -32,48 +33,18 @@ const officeFormSchema = z.object({
   officePerson: z.string().refine((data) => data != '', {
     message: 'Kötelező!'
   }),
-  q1: z.string().refine((data) => data != '', {
+  numOfCompanies: z.string().refine((data) => data != '', {
     message: 'Kötelező!'
   }),
-  q2: z.string().refine((data) => data != '', {
+  usedPrograms: z.string().refine((data) => data != '', {
     message: 'Kötelező!'
   }),
-  q3: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q4: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q5: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q6: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q7: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q8: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q9: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q10: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q11: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q12: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q13: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
-  q14: z.string().refine((data) => data != '', {
-    message: 'Kötelező!'
-  }),
+  note: z
+    .string()
+    .max(200, {
+      message: 'Megjegyzés maximum hossza 200 karakter'
+    })
+    .optional(),
   terms: z.boolean().refine((data) => data, {
     message: 'Kötelező!'
   }),
@@ -90,20 +61,9 @@ const OfficeFormComponent = () => {
       phone: '',
       officePerson: '',
       officeName: '',
-      q1: '',
-      q2: '',
-      q3: '',
-      q4: '',
-      q5: '',
-      q6: '',
-      q7: '',
-      q8: '',
-      q9: '',
-      q10: '',
-      q11: '',
-      q12: '',
-      q13: '',
-      q14: '',
+      numOfCompanies: '',
+      usedPrograms: '',
+      note: '',
       terms: false,
       newsletter: false
     }
@@ -202,11 +162,11 @@ const OfficeFormComponent = () => {
         />
         <FormField
           control={form.control}
-          name="q1"
+          name="numOfCompanies"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Több ügyfél – több rendszer – több megoldás?" {...field} />
+                <Input placeholder="Kezelt cégek száma" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -214,179 +174,27 @@ const OfficeFormComponent = () => {
         />
         <FormField
           control={form.control}
-          name="q2"
+          name="usedPrograms"
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input
-                  placeholder="Ügyfelek eltérő vállalatirányítási rendszert alkalmaznak?"
+                <Input placeholder="Használt könyvelési szoftverek" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="note"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Textarea
+                  placeholder="Megjegyzés érdeklődésével kapcsolatban"
+                  rows={4}
                   {...field}
                 />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q3"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  placeholder="Mindegyik rendszer rendelkezik pénzügyi folyamatokat is biztosító modullal?"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q4"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  placeholder="Az ügyfelek eltérő módon próbálják kialakítani a könyvelésükhöz tartozó tevékenységet?"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q5"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  placeholder="Használ kreatív megoldásokat az iroda illetve az ott dolgozó munkatársak?"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q6"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  placeholder="Van olyan megoldás, ami mindenki számára elfogadható? (ügyfelek – könyvelő)"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q7"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="Szokták mérni a munkatársak teljesítményét?" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q8"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="Folyamatokat szoktak optimalizálni?" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q9"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  placeholder="Van olyan tevékenység, ami indokolatlanul sok időt vesz igénybe? (e-mail; telefon; egyéb)"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q10"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  placeholder="Az iroda tud jelenleg egy, minden ügyfél számára elfogadható egységes megoldást kínálni?"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q11"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="A könyvelésre való dokumentum átadás automatikus?" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q12"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="A számlák papír alapú kezelése okoz problémát?" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q13"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input
-                  placeholder="Az átadott papír alapú számlák kezelése könnyen megoldható (archiválás; keresés)?"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="q14"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder="Okozott már problémát a dokumentumok keveredése?" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
