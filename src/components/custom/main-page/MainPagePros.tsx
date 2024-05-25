@@ -28,9 +28,9 @@ export const MainPagePros = () => {
             />{' '}
             előnyei?
           </h2>
-          <div className="w-full flex flex-row justify-between gap-4">
+          <div className="w-full flex flex-row-reverse justify-between gap-4">
             <div className="w-full lg:w-1/2 h-full flex flex-col gap-8 justify-start items-start p-8 shadow-lg rounded-lg border-slate-200/50 border">
-              <h3>Technikai</h3>
+              <h3 className="text-xl">Technikai megoldások</h3>
               <ul className="flex flex-col list-disc ml-4 text-base gap-2 ">
                 <ListItem>Felhőalapú működés</ListItem>
                 <ListItem>Szerződésbe foglalva vállaljuk a szolgáltatás minőségét</ListItem>
@@ -48,7 +48,7 @@ export const MainPagePros = () => {
               </ul>
             </div>
             <div className="w-full lg:w-1/2 h-full flex flex-col gap-8 justify-start items-start p-8 shadow-lg rounded-lg border-slate-200/50 border">
-              <h3>Használati</h3>
+              <h3 className="text-xl">A mindennapi használat során</h3>
               <ul className="flex flex-col list-disc ml-4 text-base gap-2">
                 <ListItem>A megtakarított idő mérhető és költségben kimutatható</ListItem>
                 <ListItem>Dokumentumok átadása ellenőrzött körülmények között</ListItem>
