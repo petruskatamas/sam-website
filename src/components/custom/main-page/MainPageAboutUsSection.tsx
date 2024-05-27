@@ -5,8 +5,10 @@ import {
   CloudUploadIcon,
   EyeIcon,
   FileClockIcon,
+  MessageCircleQuestionIcon,
   NotebookTabsIcon,
   QrCodeIcon,
+  SquareDashedKanbanIcon,
   TabletSmartphoneIcon
 } from 'lucide-react'
 import Image from 'next/image'
@@ -15,7 +17,7 @@ import samLogo from '@/images/sam-logo-small.svg'
 
 export const MainPageAboutUsSection = () => {
   return (
-    <section id="about-1" className="scroll-mt-12 w-full bg-white px-4 md:px-8 lg:px-0">
+    <section id="about-1" className="-scroll-mt-4 w-full bg-white px-4 md:px-8 lg:px-0">
       <div className='className="w-full max-w-screen-lg mx-auto flex flex-col gap-10'>
         <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-16 pt-16 lg:pt-32">
           <div className="container p-8 shadow-lg rounded-lg border-slate-200/50 border">
@@ -26,11 +28,19 @@ export const MainPageAboutUsSection = () => {
                 </div>
                 <div className="space-y-6 lg:space-y-10">
                   <div className="flex">
-                    <FileClockIcon className="flex-shrink-0 mt-2 h-10 w-10" />
+                    <MessageCircleQuestionIcon className="flex-shrink-0 mt-2 h-10 w-10" />
                     <div className="ms-5 sm:ms-8">
                       <p className="mt-1 text-muted-foreground">
-                        Egy kimutatás szerint a magyar könyvelők majdnem fele a munkaideje felét
-                        monoton feladatokkal tölti
+                        Az egyik legnagyobb problémát a kiszámíthatatlanság jelenti a könyvelőirodák
+                        részére.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <SquareDashedKanbanIcon className="flex-shrink-0 mt-2 h-10 w-10" />
+                    <div className="ms-5 sm:ms-8">
+                      <p className="mt-1 text-muted-foreground">
+                        A napi munkavégzésből hiányzik a tervezhetőség.
                       </p>
                     </div>
                   </div>
@@ -38,8 +48,16 @@ export const MainPageAboutUsSection = () => {
                     <NotebookTabsIcon className="flex-shrink-0 mt-2 h-10 w-10" />
                     <div className="ms-5 sm:ms-8">
                       <p className="mt-1 text-muted-foreground">
-                        Harmaduk pedig a munkaidő háromnegyedében végez ehhez hasonló adatrögzítő
-                        tevékenységet
+                        A könyvelők közel harmada szeretné, hogy az adminisztrációs tevékenységre
+                        szánt munkaidejük csökkenjen.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <FileClockIcon className="flex-shrink-0 mt-2 h-10 w-10" />
+                    <div className="ms-5 sm:ms-8">
+                      <p className="mt-1 text-muted-foreground">
+                        Jelentős időt igényel többek között a monoton adatrögzítő tevékenység.
                       </p>
                     </div>
                   </div>
@@ -91,6 +109,31 @@ export const MainPageAboutUsSection = () => {
         </div>
         <div className="w-full">
           <Image src={aboutArtwork} alt="Artwork" className="w-full" />
+        </div>
+        <div className=" w-full lg:w-[413px] h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border">
+          <h2 className="border-b border-primary-orange pb-4 text-3xl font-semibold tracking-tight">
+            Egyszerű kezelés az ügyfeleknek
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            A könyvelők számára fontos dokumentumok kezelése az ügyfeleknek sokszor nehézséget okoz,
+            amire hatékony, letisztult, funkcionalitást SAM előtt tartó kezelési felületeket
+            biztosítunk.
+          </p>
+          <p className="mt-5">
+            <a
+              className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
+              href="#contact"
+            >
+              Lépjen kapcsolatba a{' '}
+              <Image
+                src={samLogo}
+                alt="SAM Logo"
+                className="w-8 h-8 mx-1 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
+              />{' '}
+              csapatával
+              <ChevronRightIcon className="flex-shrink-0 w-4 h-4" />
+            </a>
+          </p>
         </div>
         <div className="w-full">
           <div className="pb-16">

@@ -19,7 +19,7 @@ import { SendHorizonalIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useToast } from '@/components/ui/use-toast'
 
-export const phoneRegex = /^\+3620|^\+3630|^\+3670|^\+361|^\+3631/
+export const phoneRegex = /^\+3620|^\+3630|^\+3670|^\+361|^\+3631|^\0620|^\0630|^\0670|^\061|^\0631/
 
 const companyFormSchema = z.object({
   email: z.string().email({

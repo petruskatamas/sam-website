@@ -1,5 +1,4 @@
 import * as React from 'react'
-import navLogo from '@/images/sam-logo-small.png'
 import {
   Body,
   Container,
@@ -41,7 +40,13 @@ export const InternalOfficeEmailTemplate: React.FC<Readonly<InternalOfficeEmailT
       <Body style={main}>
         <Tailwind>
           <Container style={container}>
-            <Img src={navLogo.src} width="50" height="50" alt="SAM Logo" style={logo} />
+            <Img
+              src={'https://sam.itps.hu/web/assets/deeb957c/imgs/sam-logo-small.png'}
+              width="50"
+              height="50"
+              alt="SAM Logo"
+              style={logo}
+            />
             <Hr style={hr} />
             <Text style={paragraph}>
               Kapcsolatfelvételi adatok a SAM weboldaláról - Könyvelőiroda

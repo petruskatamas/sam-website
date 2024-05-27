@@ -46,7 +46,10 @@ export default function NavigationMenuDemo() {
                   </div>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="#about-1" title="Használati előnyök">
+              <ListItem href="#about-1" title="Miért a SAM?">
+                Milyen problémákra nyújt megoldást a SAM?
+              </ListItem>
+              <ListItem href="#about-2" title="Használati előnyök">
                 Ismerkedj meg a SAM-el!
               </ListItem>
               <ListItem href="#about-2" title="Technikai megoldások">

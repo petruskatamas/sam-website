@@ -37,22 +37,23 @@ export const Footer = () => {
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
             <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
-              Segítség
-            </h4>
-            <ul>
-              <FooterListItem href={'#faq'}>FAQ</FooterListItem>
-            </ul>
-          </div>
-          <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
-            <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
               Kapcsolat
             </h4>
             <ul>
-              <FooterListItem href={'mailto:support@simpleaccounting.hu'}>
-                support@simpleaccounting.hu
+              <FooterListItem href={'#'}>
+                <span className="font-semibold">SMART TECH INVESTMENT KFT.</span>
               </FooterListItem>
-              <FooterListItem href={'tel:+3614433320'}>+36 1 443 3320</FooterListItem>
-              <FooterListItem href={'#'}>Simple Accounting Kft.</FooterListItem>
+              <FooterListItem href="#">
+                <span className="text-[12px] font-medium">
+                  1053 Budapest, Veres Pálné utca 9. 1. em. 2.
+                </span>
+              </FooterListItem>
+              <FooterListItem href={'mailto:support@simpleaccounting.hu'}>
+                <span className="text-[12px] font-medium">support@simpleaccounting.hu</span>
+              </FooterListItem>
+              <FooterListItem href={'tel:+3614433320'}>
+                <span className="text-[12px] font-medium">+36 1 443 3320</span>
+              </FooterListItem>
             </ul>
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
@@ -63,6 +64,14 @@ export const Footer = () => {
               <FooterListItem href={'#'}>ÁSZF</FooterListItem>
               <FooterListItem href={'#'}>Adatvédelem</FooterListItem>
               <FooterListItem href={'#'}>Panaszkezelés</FooterListItem>
+            </ul>
+          </div>
+          <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
+            <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">
+              Segítség
+            </h4>
+            <ul>
+              <FooterListItem href={'#faq'}>FAQ</FooterListItem>
             </ul>
           </div>
         </div>

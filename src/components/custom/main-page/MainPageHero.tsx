@@ -61,7 +61,7 @@ export const MainPageHero = () => {
             />
             <div className="w-full">
               <h2 className="w-full text-center font-medium text-base border-t border-b border-primary-orange py-4">
-                Könyvelés támogató rendszer
+                Könyvelést támogató megoldások
               </h2>
             </div>
             <div className="w-full border-primary-orange gap-8 hidden lg:flex justify-center lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-delay-[500ms] lg:animate-ease-in-out">
