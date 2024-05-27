@@ -52,6 +52,8 @@ export const ThankYouEmailTemplate: React.FC<Readonly<ThankYouEmailTemplateProps
             </Text>
             <Hr style={hr} />
             <Text style={footer}>
+              SMART TECH INVESTMENT KFT.
+              <br />
               <Link href="https://www.simpleaccounting.hu" className="text-[#8898aa] underline">
                 simpleaccounting.hu
               </Link>
@@ -60,9 +62,9 @@ export const ThankYouEmailTemplate: React.FC<Readonly<ThankYouEmailTemplateProps
                 support@simpleaccounting.hu
               </Link>
               <br />
-              +36 20 XXX XX XX
+              +36 1 443 3320
               <br />
-              1167 Budapest, XY utca 5.
+              1053 Budapest, Veres Pálné utca 9. 1. em. 2.
             </Text>
             <Row>
               <Column align="left">
