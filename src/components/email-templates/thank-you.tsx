@@ -1,5 +1,4 @@
 import * as React from 'react'
-import navLogo from '@/images/sam-logo-small.png'
 
 import {
   Body,
@@ -32,7 +31,13 @@ export const ThankYouEmailTemplate: React.FC<Readonly<ThankYouEmailTemplateProps
       <Body style={main}>
         <Tailwind>
           <Container style={container}>
-            <Img src={navLogo.src} width="50" height="50" alt="SAM Logo" style={logo} />
+            <Img
+              src={'https://sam.itps.hu/web/assets/deeb957c/imgs/sam-logo-small.png'}
+              width="50"
+              height="55"
+              alt="SAM Logo"
+              style={logo}
+            />
             <Hr style={hr} />
             <Text style={paragraph}>Tisztelt {person},</Text>
             <Text style={paragraph}>

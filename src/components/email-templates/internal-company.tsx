@@ -35,7 +35,7 @@ export const InternalCompanyEmailTemplate: React.FC<
             <Img
               src={'https://sam.itps.hu/web/assets/deeb957c/imgs/sam-logo-small.png'}
               width="50"
-              height="50"
+              height="55"
               alt="SAM Logo"
               style={logo}
             />
