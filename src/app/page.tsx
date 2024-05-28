@@ -12,8 +12,8 @@ export default function Home() {
       <MainPageHero />
       <MainPageAboutUsSection />
       <MainPagePros />
-      <MainPageTheySaid />
       <MainPagePricing />
+      <MainPageTheySaid />
       <MainPageHelpSection />
       <MainPageContact />
     </>

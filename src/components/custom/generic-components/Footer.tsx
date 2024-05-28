@@ -24,8 +24,10 @@ export const Footer = () => {
               Rólunk
             </h4>
             <ul>
-              <FooterListItem href={'#about-1'}>Szolgáltatásunk</FooterListItem>
-              <FooterListItem href={'#about-2'}>Előnyök</FooterListItem>
+              <FooterListItem href={'#about-1'}>Miert a SAM?</FooterListItem>
+              <FooterListItem href={'#about-2'}>Használati előnyök</FooterListItem>
+              <FooterListItem href={'#about-2'}>Technikai megoldások</FooterListItem>
+              <FooterListItem href={'#they-said'}>Rólunk mondták</FooterListItem>
             </ul>
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
