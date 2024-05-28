@@ -110,58 +110,60 @@ export const MainPageAboutUsSection = () => {
         <div className="w-full">
           <Image src={aboutArtwork} alt="Artwork" className="w-full" />
         </div>
-        <div className=" w-full lg:w-[413px] h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border">
-          <h2 className="border-b border-primary-orange pb-4 text-3xl font-semibold tracking-tight">
-            Egyszerű kezelés az ügyfeleknek
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            A könyvelők számára fontos dokumentumok kezelése az ügyfeleknek sokszor nehézséget okoz,
-            amire hatékony, letisztult, funkcionalitást SAM előtt tartó kezelési felületeket
-            biztosítunk.
-          </p>
-          <p className="mt-5">
-            <a
-              className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
-              href="#contact"
-            >
-              Lépjen kapcsolatba a{' '}
-              <Image
-                src={samLogo}
-                alt="SAM Logo"
-                className="w-8 h-8 mx-1 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
-              />{' '}
-              csapatával
-              <ChevronRightIcon className="flex-shrink-0 w-4 h-4" />
-            </a>
-          </p>
-        </div>
         <div className="w-full">
           <div className="pb-16">
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-8">
-              <div className="relative lg:sticky top-0 lg:top-32 w-full lg:w-5/6 h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border">
-                <h2 className="border-b border-primary-orange pb-4 text-3xl font-semibold tracking-tight">
-                  Újfajta kapcsolat könyvelőirodák és ügyfeleik között
-                </h2>
-                <p className="mt-3 text-muted-foreground">
-                  A digitalizáció előretörésével egy újfajta kapcsolat alakul ki a könyvelőirodák és
-                  ügyfeleik között, amely lehetővé teszi az adatok gyorsabb és hatékonyabb
-                  megosztását.
-                </p>
-                <p className="mt-5">
-                  <a
-                    className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
-                    href="#contact"
-                  >
-                    Lépjen kapcsolatba a{' '}
-                    <Image
-                      src={samLogo}
-                      alt="SAM Logo"
-                      className="w-8 h-8 mx-1 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
-                    />{' '}
-                    csapatával
-                    <ChevronRightIcon className="flex-shrink-0 w-4 h-4" />
-                  </a>
-                </p>
+              <div className="w-full flex flex-col gap-8">
+                <div className="w-full h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border">
+                  <h2 className="border-b border-primary-orange pb-4 text-3xl font-semibold tracking-tight">
+                    Újfajta kapcsolat könyvelőirodák és ügyfeleik között
+                  </h2>
+                  <p className="mt-3 text-muted-foreground">
+                    A digitalizáció előretörésével egy újfajta kapcsolat alakul ki a könyvelőirodák
+                    és ügyfeleik között, amely lehetővé teszi az adatok gyorsabb és hatékonyabb
+                    megosztását.
+                  </p>
+                  <p className="mt-5">
+                    <a
+                      className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
+                      href="#contact"
+                    >
+                      Lépjen kapcsolatba a{' '}
+                      <Image
+                        src={samLogo}
+                        alt="SAM Logo"
+                        className="w-8 h-8 mx-1 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
+                      />{' '}
+                      csapatával
+                      <ChevronRightIcon className="flex-shrink-0 w-4 h-4" />
+                    </a>
+                  </p>
+                </div>
+                <div className="w-full h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border">
+                  <h2 className="border-b border-primary-orange pb-4 text-3xl font-semibold tracking-tight">
+                    Egyszerű kezelés az ügyfeleknek
+                  </h2>
+                  <p className="mt-3 text-muted-foreground">
+                    A könyvelők számára fontos dokumentumok kezelése az ügyfeleknek sokszor
+                    nehézséget okoz, amire hatékony, letisztult, funkcionalitást SAM előtt tartó
+                    kezelési felületeket biztosítunk.
+                  </p>
+                  <p className="mt-5">
+                    <a
+                      className="inline-flex items-center text-[14px] md:text-[17px] gap-x-1 group font-medium hover:underline hover:text-primary-orange transition-all duration-300 ease-in-out underline-offset-4 "
+                      href="#contact"
+                    >
+                      Lépjen kapcsolatba a{' '}
+                      <Image
+                        src={samLogo}
+                        alt="SAM Logo"
+                        className="w-8 h-8 mx-1 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
+                      />{' '}
+                      csapatával
+                      <ChevronRightIcon className="flex-shrink-0 w-4 h-4" />
+                    </a>
+                  </p>
+                </div>
               </div>
               <div className="space-y-6 lg:space-y-10 px-2 lg:px-0">
                 <div className="flex group cursor-default">

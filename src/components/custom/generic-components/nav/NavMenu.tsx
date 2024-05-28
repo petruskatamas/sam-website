@@ -24,8 +24,8 @@ export default function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Rólunk</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.7fr_1fr]">
-              <li className="row-span-3">
+            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] grid-cols-[.7fr_1fr]">
+              <li className="row-span-4">
                 <NavigationMenuLink asChild>
                   <div className="w-full h-full flex flex-col justify-center items-center gap-2">
                     <h2 className="text-base font-medium leading-none">Kövess minket!</h2>
@@ -54,6 +54,9 @@ export default function NavigationMenuDemo() {
               </ListItem>
               <ListItem href="#about-2" title="Technikai megoldások">
                 Miért a SAM a tökéletes választás?
+              </ListItem>
+              <ListItem href="#they-said" title="Rólunk mondták" className="">
+                Ügyfeleink véleménye
               </ListItem>
             </ul>
           </NavigationMenuContent>

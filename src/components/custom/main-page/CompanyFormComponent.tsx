@@ -122,7 +122,7 @@ const CompanyFormComponent = () => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input placeholder="Telefonszám" {...field} />
+                  <Input placeholder="Telefonszám (+36 1 234 5678)" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

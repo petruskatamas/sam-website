@@ -32,36 +32,36 @@ export const MainPagePros = () => {
             <div className="w-full lg:w-1/2 h-full flex flex-col gap-8 justify-start items-start p-8 shadow-lg rounded-lg border-slate-200/50 border">
               <h3 className="text-xl">Technikai megoldások</h3>
               <ul className="flex flex-col list-disc ml-4 text-base gap-2 ">
-                <ListItem>Felhőalapú működés</ListItem>
-                <ListItem>Szerződésbe foglalva vállaljuk a szolgáltatás minőségét</ListItem>
-                <ListItem>Szakértői háttértámogatást nyújtunk</ListItem>
-                <ListItem>Az adatok tárolása megfelel a mai biztonsági elvárásoknak</ListItem>
+                <ListItem>Felhőalapú működés.</ListItem>
+                <ListItem>Szerződésbe foglalva vállaljuk a szolgáltatás minőségét.</ListItem>
+                <ListItem>Szakértői háttértámogatást nyújtunk.</ListItem>
+                <ListItem>Az adatok tárolása megfelel a mai biztonsági elvárásoknak.</ListItem>
                 <ListItem>
                   Az adattárolás szervere Magyarországon <br />
-                  található
+                  található.
                 </ListItem>
-                <ListItem>Rendelkezésre állási paraméter 99,9%</ListItem>
-                <ListItem>Magas felügyeleti rendszerrel védett szerverközpont</ListItem>
-                <ListItem>Napi adatmentés</ListItem>
-                <ListItem>Valós könyvelői igények által fejlesztve</ListItem>
-                <ListItem>Fejlesztési észrevételek rugalmas kezelésének lehetősége</ListItem>
+                <ListItem>Rendelkezésre állási paraméter 99,9%.</ListItem>
+                <ListItem>Magas felügyeleti rendszerrel védett szerverközpont.</ListItem>
+                <ListItem>Napi adatmentés.</ListItem>
+                <ListItem>Valós könyvelői igények által fejlesztve.</ListItem>
+                <ListItem>Fejlesztési észrevételek rugalmas kezelésének .</ListItem>
               </ul>
             </div>
             <div className="w-full lg:w-1/2 h-full flex flex-col gap-8 justify-start items-start p-8 shadow-lg rounded-lg border-slate-200/50 border">
-              <h3 className="text-xl">A mindennapi használat során</h3>
+              <h3 className="text-xl">A mindennapi használat során.</h3>
               <ul className="flex flex-col list-disc ml-4 text-base gap-2">
-                <ListItem>A megtakarított idő mérhető és költségben kimutatható</ListItem>
-                <ListItem>Dokumentumok átadása ellenőrzött körülmények között</ListItem>
+                <ListItem>A megtakarított idő mérhető és költségben kimutatható.</ListItem>
+                <ListItem>Dokumentumok átadása ellenőrzött körülmények között.</ListItem>
                 <ListItem>
-                  Minden könyvelt cég esetében azonos felületen történik a kommunikáció
+                  Minden könyvelt cég esetében azonos felületen történik a kommunikáció.
                 </ListItem>
-                <ListItem>Beérkezett és küldött dokumentumok ellenőrizhetők</ListItem>
-                <ListItem>Valamennyi feltöltött céges dokumentum azonnal elérhető</ListItem>
+                <ListItem>Beérkezett és küldött dokumentumok ellenőrizhetők.</ListItem>
+                <ListItem>Valamennyi feltöltött céges dokumentum azonnal elérhető.</ListItem>
                 <ListItem>
-                  Dokumentumok átadása után tisztán láthatók az elvégzendő feladatok
+                  Dokumentumok átadása után tisztán láthatók az elvégzendő feladatok.
                 </ListItem>
                 <ListItem>
-                  NAV online felületéről érkező adatokkal történő gyors összevetés
+                  NAV online felületéről érkező adatokkal történő gyors összevetés.
                 </ListItem>
               </ul>
             </div>
