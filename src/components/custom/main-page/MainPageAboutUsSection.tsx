@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   AlarmClockCheckIcon,
+  CableIcon,
   ChevronRightIcon,
   CloudUploadIcon,
   EyeIcon,
@@ -236,6 +237,41 @@ export const MainPageAboutUsSection = () => {
                       fizikai adattárolás nélkül!
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex w-full group cursor-default pt-16">
+              <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full shadow-lg text-primary-orange group-hover:bg-primary-orange/90 group-hover:shadow-xl group-hover:text-white transition-all ease-in-out duration-300">
+                <CableIcon className="flex-shrink-0 w-5 h-5" />
+              </span>
+              <div className="ml-5 w-full">
+                <h3 className="text-lg font-semibold pb-2 border-b border-primary-orange">
+                  Könnyű integráció
+                </h3>
+                <div className="mt-1 flex w-full flex-col gap-4 pt-4">
+                  <span className="flex flex-col w-full gap-2 font-semibold">
+                    <span className="flex flex-row w-full gap-2 items-center">
+                      A <Image src={samLogo} alt="SAM Logo" className="w-8 h-8" /> integrációjával
+                      további támogatás érhető el,
+                    </span>
+                    melynek eredménye képpen a munkavégzés hatékonysága tovább növelhető!
+                  </span>
+                  <span>
+                    Amennyiben a használt könyvelőprogram API-n vagy valamely más módon képes
+                    adatokat fogadni úgy rendszerünk összeköthető a programmal. Munkatársaink a
+                    lehető legrövidebb időn belül válaszolnak a részünkre megküldött integrációs
+                    kérésekre és kérdésekre.
+                  </span>
+                  <span>
+                    A{' '}
+                    <a
+                      href="mailto:support@simpleaccounting.hu"
+                      className="underline text-primary-orange hover:text-primary-orange/70 transition-colors duration-200 ease-in-out"
+                    >
+                      support@simpleaccounting.hu
+                    </a>{' '}
+                    e-mail címen várjuk az integrációval kapcsolatos kéréseket, kérdéseket.
+                  </span>
                 </div>
               </div>
             </div>

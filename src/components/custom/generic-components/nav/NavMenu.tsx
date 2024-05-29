@@ -30,7 +30,7 @@ export default function NavigationMenuDemo() {
                   <div className="w-full h-full flex flex-col justify-center items-center gap-2">
                     <h2 className="text-base font-medium leading-none">Kövess minket!</h2>
                     <div className="grid grid-cols-2 gap-2 h-fit w-fit">
-                      <a href="/">
+                      <a href="https://www.facebook.com/profile.php?id=61553716456220">
                         <Image src={facebook} alt="Social Icon" />
                       </a>
                       <a href="/">

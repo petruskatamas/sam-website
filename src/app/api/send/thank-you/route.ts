@@ -15,7 +15,12 @@ export async function POST(req: NextRequest) {
     subject: 'Simple Accounting - Kapcsolatfelvételi értesítés',
     react: ThankYouEmailTemplate({
       company: values.officeName ? values.officeName : values.companyName,
-      person: values.officePerson ? values.officePerson : values.companyPerson
+      person: values.officePerson ? values.officePerson : values.companyPerson,
+      email: values.email,
+      phone: values.phone,
+      note: values.note,
+      numOfCompanies: values.numOfCompanies ? values.numOfCompanies : undefined,
+      usedPrograms: values.usedPrograms ? values.usedPrograms : undefined
     })
   })
   console.log(data)

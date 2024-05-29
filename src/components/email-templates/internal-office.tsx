@@ -88,7 +88,7 @@ export const InternalOfficeEmailTemplate: React.FC<Readonly<InternalOfficeEmailT
             </Text>
             <Row>
               <Column align="left">
-                <Link href="https://google.com">
+                <Link href="https://www.facebook.com/profile.php?id=61553716456220">
                   <Img
                     src={
                       'https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png'

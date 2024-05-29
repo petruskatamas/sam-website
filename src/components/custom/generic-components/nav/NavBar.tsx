@@ -51,7 +51,7 @@ export const NavBar = () => {
                     <NavigationMenuLink asChild>
                       <div className="w-full h-full flex flex-col justify-center items-center gap-2">
                         <div className="flex flex-row gap-4 h-fit w-fit">
-                          <a href="/">
+                          <a href="https://www.facebook.com/profile.php?id=61553716456220">
                             <Image src={facebook} alt="Social Icon" />
                           </a>
                           <a href="/">

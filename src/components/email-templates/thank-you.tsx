@@ -17,13 +17,23 @@ import {
 interface ThankYouEmailTemplateProps {
   company: string
   person: string
+  email: string
+  phone: string
+  note: string
+  numOfCompanies?: string
+  usedPrograms?: string
 }
 
 //TODO: solve import issue
 
 export const ThankYouEmailTemplate: React.FC<Readonly<ThankYouEmailTemplateProps>> = ({
   person,
-  company
+  company,
+  email,
+  phone,
+  note,
+  numOfCompanies,
+  usedPrograms
 }) => {
   return (
     <Html>
@@ -44,6 +54,29 @@ export const ThankYouEmailTemplate: React.FC<Readonly<ThankYouEmailTemplateProps
               Köszönjük a megkeresést a(z) <strong>{company}</strong> nevében.
               <br />
               Munkatársaink hamarosan felveszik Önokkel a kapcsolatot!
+            </Text>
+            <Text style={paragraph}>
+              Megadott adatai:
+              <br />
+              Email: {email}
+              <br />
+              Telefon: {phone}
+              <br />
+              Cég neve: {company}
+              <br />
+              Kapcsolattartó személy: {person}
+              <br />
+              {
+                <>
+                  numOfCompanies && usedPrograms &&
+                  <br />
+                  Kezelt cégek száma: {numOfCompanies}
+                  <br />
+                  Használt könyvelőprogramok: {usedPrograms}
+                </>
+              }
+              Megjegyzés: {note}
+              <br />
             </Text>
             <Text style={paragraph}>
               Köszönettel,
@@ -68,7 +101,7 @@ export const ThankYouEmailTemplate: React.FC<Readonly<ThankYouEmailTemplateProps
             </Text>
             <Row>
               <Column align="left">
-                <Link href="https://google.com">
+                <Link href="https://www.facebook.com/profile.php?id=61553716456220">
                   <Img
                     src={
                       'https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png'
