@@ -6,9 +6,11 @@ import {
   CloudUploadIcon,
   EyeIcon,
   FileClockIcon,
+  HardDriveUploadIcon,
   MessageCircleQuestionIcon,
   NotebookTabsIcon,
   QrCodeIcon,
+  ShieldCheckIcon,
   SquareDashedKanbanIcon,
   TabletSmartphoneIcon
 } from 'lucide-react'
@@ -97,6 +99,23 @@ export const MainPageAboutUsSection = () => {
                       </p>
                     </div>
                   </div>
+                  <div className="flex">
+                    <ShieldCheckIcon className="flex-shrink-0 mt-2 h-10 w-10" />
+                    <div className="ms-5 sm:ms-8">
+                      <p className="mt-1 text-muted-foreground">
+                        SAM használatával elkerülhetők a dokumentumvesztések.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    <HardDriveUploadIcon className="flex-shrink-0 mt-2 h-10 w-10" />
+                    <div className="ms-5 sm:ms-8">
+                      <p className="mt-1 text-muted-foreground">
+                        Folyamatosan bővíthető hátteret biztosítunk, melynek kezeléséről Mi
+                        gondoskodunk.
+                      </p>
+                    </div>
+                  </div>
                   <div>
                     <h3 className="text-lg font-bold border-t pt-8 border-primary-orange">
                       Az innovatív technológiák alkalmazása lehetővé teszi a vállalatok és egyének
@@ -106,6 +125,16 @@ export const MainPageAboutUsSection = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="w-full h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border flex flex-row items-center justify-between gap-8">
+          <Image src={samLogo} alt="SAM Logo" className="w-24 h-24" />
+          <div>
+            <p>
+              A <strong className="text-primary-orange">SAM</strong> használata segít átlátni a
+              vállalkozás pénzügyi helyzetét, elősegíti a hatékony és gyors döntéseket, valamint
+              nagyban hozzájárul a vállalkozás növekedéséhez és versenyképességéhez.
+            </p>
           </div>
         </div>
         <div className="w-full">

@@ -15,7 +15,7 @@ export const MainPagePros = () => {
   return (
     <div
       id="about-2"
-      className="scroll-mt-12 w-full h-fit lg:h-[120vh] bg-pros-hero bg-fixed bg-repeat"
+      className="scroll-mt-0 w-full h-fit lg:h-[120vh] bg-pros-hero bg-fixed bg-repeat"
     >
       <div className="w-full h-full bg-black/30 backdrop-blur-lg flex justify-center items-center py-8 px-4 md:px-8 lg:px-0 lg:py-0">
         <div className="group w-fit lg:w-full max-w-screen-lg h-3/4 bg-white shadow-xl rounded-lg p-6 lg:p-10 flex flex-col gap-8">

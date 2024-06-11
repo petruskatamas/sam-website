@@ -4,7 +4,7 @@ const MainPageTheySaid = () => {
   return (
     <div
       id="they-said"
-      className="scroll-mt-12 w-full h-fit lg:h-fit pt-16 pb-16 lg:pt-0 lg:pb-32 bg-white px-4 md:px-8 lg:px-0"
+      className="scroll-mt-32 w-full h-fit lg:h-fit pt-16 pb-16 lg:pt-0 lg:pb-32 bg-white px-4 md:px-8 lg:px-0"
     >
       <div className="w-full max-w-screen-lg mx-auto flex flex-col items-center gap-8">
         <h2 className="w-full text-center border-b border-primary-orange pb-8">Rólunk mondták</h2>

@@ -65,14 +65,16 @@ export const MainPageHero = () => {
               </h2>
             </div>
             <div className="w-full border-primary-orange gap-8 hidden lg:flex justify-center lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-delay-[500ms] lg:animate-ease-in-out">
-              <Button
-                variant={'secondary'}
-                size={'lg'}
-                className="flex flex-row items-center gap-4 shadow-lg !w-[200px]"
-              >
-                Belépés
-                <LogIn />
-              </Button>
+              <a className="w-fit h-fit" href="https://sam.itps.hu/">
+                <Button
+                  variant={'secondary'}
+                  size={'lg'}
+                  className="flex flex-row items-center gap-4 shadow-lg !w-[200px]"
+                >
+                  Belépés
+                  <LogIn />
+                </Button>
+              </a>
             </div>
             <div className="w-full flex flex-col lg:flex-row lg:hidden items-center justify-center gap-2 md:gap-8">
               <Button
