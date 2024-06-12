@@ -85,14 +85,20 @@ export const MainPageHero = () => {
                 Belépés
                 <LogIn />
               </Button>
-              <a className="w-fit h-fit flex items-center shadow-lg" href="/">
+              <a
+                className="w-fit h-fit flex items-center shadow-lg"
+                href="https://play.google.com/store/apps/details?id=io.ionic.samapp&pli=1"
+              >
                 <Image
                   src={getItInPlay}
                   alt="Play Strore"
                   className="w-[200px] sm:h-[57px] rounded-xl"
                 />
               </a>
-              <a className="w-fit h-fit shadow-lg" href="/">
+              <a
+                className="w-fit h-fit shadow-lg"
+                href="https://apps.apple.com/hu/app/sam/id6450101726?l=hu"
+              >
                 <Image src={getItInApp} alt="App Strore" className="w-[200px] sm:h-[60px]" />
               </a>
             </div>
@@ -104,14 +110,14 @@ export const MainPageHero = () => {
           <div className="w-fit flex flex-col md:flex-row gap-12 mx-auto items-start">
             <HeroCard
               name="App Store"
-              link="/"
+              link="https://apps.apple.com/hu/app/sam/id6450101726?l=hu"
               image={appleLogo}
               qrCode={appleQR}
               tooltip="Alkalmazás letöltése az App Store-ból"
             />
             <HeroCard
               name="Play Store"
-              link="/"
+              link="https://play.google.com/store/apps/details?id=io.ionic.samapp&pli=1"
               image={playStoreLogo}
               qrCode={androidQR}
               tooltip="Alkalmazás letóltáse a Play Store-ból"
