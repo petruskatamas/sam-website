@@ -63,9 +63,36 @@ export const Footer = () => {
               Dokumentumok
             </h4>
             <ul>
-              <FooterListItem href={'#'}>ÁSZF</FooterListItem>
-              <FooterListItem href={'#'}>Adatvédelem</FooterListItem>
-              <FooterListItem href={'#'}>Panaszkezelés</FooterListItem>
+              <li className="cursor-default hover:font-bold hover:pl-2 hover:text-primary-orange/90 transition-all ease-in-out duration-200">
+                <a
+                  href={'/download/sam-software-aszf.pdf'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  Szoftver ÁSZF
+                </a>
+              </li>
+              <li className="cursor-default hover:font-bold hover:pl-2 hover:text-primary-orange/90 transition-all ease-in-out duration-200">
+                <a
+                  href={'/download/sam-cookie.docx'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  Cookie szabályzat
+                </a>
+              </li>
+              <li className="cursor-default hover:font-bold hover:pl-2 hover:text-primary-orange/90 transition-all ease-in-out duration-200">
+                <a
+                  href={'/download/sam-panaszkezeles.pdf'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  Panaszkezelés
+                </a>
+              </li>
             </ul>
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
