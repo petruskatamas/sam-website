@@ -1,5 +1,6 @@
 'use client'
 import { Button } from '@/components/ui/button'
+import { Switch } from '@/components/ui/switch'
 import { useEffect, useState } from 'react'
 
 export function cookieConsentGiven() {
@@ -33,11 +34,27 @@ export default function CookieBanner() {
       className={`w-full fixed bottom-0 bg-white border-t border-primary-orange transition-all duration-500 ease-in-out ${consentGiven != 'undecided' ? 'opacity-0 translate-y-32' : 'opacity-100'}`}
     >
       <div className="w-full px-8 py-4 flex flex-col md:flex-row items-center gap-4 justify-between">
-        <p className="text-sm">
-          Ez a weboldal sütiket használ a felhasználói élmény javítása érdekében. Az
-          &quot;Elfogadom&quot; gombra kattintva hozzájárul a sütik használatához. További
-          információkért kérjük, olvassa el Adatvédelmi szabályzatunkat.
-        </p>
+        <div className="flex flex-col gap-2">
+          <p className="text-sm">
+            Ez a weboldal sütiket használ a felhasználói élmény javítása érdekében. Az
+            &quot;Elfogadom&quot; gombra kattintva hozzájárul a sütik használatához. További
+            információkért kérjük, olvassa el Adatvédelmi szabályzatunkat.
+          </p>
+          <div className="w-full flex flex-col gap-2">
+            <div className="flex flex-row items-center gap-2">
+              <Switch defaultChecked />
+              <p>Müködéshez szükséges cookie-k</p>
+            </div>
+            <div className="flex flex-row items-center gap-2">
+              <Switch defaultChecked />
+              <p>Hirdetési cookie-k</p>
+            </div>
+            <div className="flex flex-row items-center gap-2">
+              <Switch defaultChecked />
+              <p>Funkcionális cookie-k</p>
+            </div>
+          </div>
+        </div>
         <div className="flex flex-row gap-4">
           <Button variant={'secondary'} size={'lg'} onClick={handleAcceptCookies}>
             Elfogadom
