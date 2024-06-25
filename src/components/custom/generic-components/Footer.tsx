@@ -75,7 +75,7 @@ export const Footer = () => {
               </li>
               <li className="cursor-default hover:font-bold hover:pl-2 hover:text-primary-orange/90 transition-all ease-in-out duration-200">
                 <a
-                  href={'/download/sam-cookie.docx'}
+                  href={'/download/sam-cookie.pdf'}
                   target="_blank"
                   rel="noopener noreferrer"
                   download
