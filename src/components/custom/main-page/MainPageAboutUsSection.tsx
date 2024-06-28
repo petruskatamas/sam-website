@@ -14,7 +14,6 @@ import {
   SquareDashedKanbanIcon,
   TabletSmartphoneIcon
 } from 'lucide-react'
-import Image from 'next/image'
 import aboutArtwork from '@/images/artwork-4.webp'
 import samLogo from '@/images/sam-logo-small.svg'
 
@@ -128,7 +127,7 @@ export const MainPageAboutUsSection = () => {
           </div>
         </div>
         <div className="w-full h-fit p-8 shadow-lg rounded-lg border-slate-200/50 border flex flex-row items-center justify-between gap-8">
-          <Image src={samLogo} alt="SAM Logo" className="w-24 h-24" />
+          <img src={samLogo.src} alt="SAM Logo" className="w-24 h-24" />
           <div>
             <p>
               A <strong className="text-primary-orange">SAM</strong> használata segít átlátni a
@@ -138,7 +137,7 @@ export const MainPageAboutUsSection = () => {
           </div>
         </div>
         <div className="w-full">
-          <Image src={aboutArtwork} alt="Artwork" className="w-full" />
+          <img src={aboutArtwork.src} alt="Artwork" className="w-full" />
         </div>
         <div className="w-full">
           <div className="pb-16">
@@ -159,8 +158,8 @@ export const MainPageAboutUsSection = () => {
                       href="#contact"
                     >
                       Lépjen kapcsolatba a{' '}
-                      <Image
-                        src={samLogo}
+                      <img
+                        src={samLogo.src}
                         alt="SAM Logo"
                         className="w-8 h-8 mx-1 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
                       />{' '}
@@ -184,8 +183,8 @@ export const MainPageAboutUsSection = () => {
                       href="#contact"
                     >
                       Lépjen kapcsolatba a{' '}
-                      <Image
-                        src={samLogo}
+                      <img
+                        src={samLogo.src}
                         alt="SAM Logo"
                         className="w-8 h-8 mx-1 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
                       />{' '}
@@ -280,7 +279,7 @@ export const MainPageAboutUsSection = () => {
                 <div className="mt-1 flex w-full flex-col gap-4 pt-4">
                   <span className="flex flex-col w-full gap-2 font-semibold">
                     <span className="flex flex-row w-full gap-2 items-center">
-                      A <Image src={samLogo} alt="SAM Logo" className="w-8 h-8" /> integrációjával
+                      A <img src={samLogo.src} alt="SAM Logo" className="w-8 h-8" /> integrációjával
                       további támogatás érhető el,
                     </span>
                     melynek eredménye képpen a munkavégzés hatékonysága tovább növelhető!

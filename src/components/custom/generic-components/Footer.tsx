@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 import samLogo from '@/images/sam-logo.png'
@@ -17,7 +16,7 @@ export const Footer = () => {
       <div className="w-full border-t border-primary-orange max-w-screen-lg mx-auto flex flex-col px-8 lg:px-0 ">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-10">
           <div className="h-[187px] flex flex-col justify-center items-center">
-            <Image src={samLogo} alt="Simple Accounting Management" className="w-[270px]" />
+            <img src={samLogo.src} alt="Simple Accounting Management" className="w-[270px]" />
           </div>
           <div className="w-full h-fit flex flex-col gap-4 shadow-lg p-4 rounded-lg border border-slate-100">
             <h4 className="w-full text-lg font-medium border-b border-primary-orange pb-3">

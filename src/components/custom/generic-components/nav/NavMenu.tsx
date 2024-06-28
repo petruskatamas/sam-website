@@ -11,7 +11,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu'
-import Image from 'next/image'
 import facebook from '@/images/icons/icons8-facebook (1).svg'
 import threads from '@/images/icons/icons8-threads.svg'
 import instagram from '@/images/icons/icons8-instagram-48.png'
@@ -31,16 +30,16 @@ export default function NavigationMenuDemo() {
                     <h2 className="text-base font-medium leading-none">Kövess minket!</h2>
                     <div className="grid grid-cols-2 gap-2 h-fit w-fit">
                       <a href="https://www.facebook.com/profile.php?id=61553716456220">
-                        <Image src={facebook} alt="Social Icon" />
+                        <img src={facebook.src} alt="Social Icon" />
                       </a>
                       <a href="/">
-                        <Image src={threads} alt="Social Icon" />
+                        <img src={threads.src} alt="Social Icon" />
                       </a>
                       <a href="/">
-                        <Image src={instagram} alt="Social Icon" />
+                        <img src={instagram.src} alt="Social Icon" />
                       </a>
                       <a href="/">
-                        <Image src={linkedin} alt="Social Icon" />
+                        <img src={linkedin.src} alt="Social Icon" />
                       </a>
                     </div>
                   </div>

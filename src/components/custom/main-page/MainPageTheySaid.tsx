@@ -1,6 +1,5 @@
 import React from 'react'
 import samLogo from '@/images/sam-logo-small.png'
-import Image from 'next/image'
 
 const MainPageTheySaid = () => {
   return (
@@ -10,7 +9,7 @@ const MainPageTheySaid = () => {
     >
       <div className="relative w-full max-w-screen-lg mx-auto flex flex-col items-center gap-8">
         <div className="absolute hidden lg:block right-32 top-36">
-          <Image src={samLogo} alt="Simple Accounting Management" className="w-24" />
+          <img src={samLogo.src} alt="Simple Accounting Management" className="w-24" />
         </div>
         <h2 className="w-full text-center border-b border-primary-orange pb-8">Rólunk mondták</h2>
         <div className="flex flex-row flex-wrap justify-between gap-4 pt-8">

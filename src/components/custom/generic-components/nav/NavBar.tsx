@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import navLogo from '@/images/sam-logo-small.png'
 import React, { useEffect, useState } from 'react'
 import NavMenu from './NavMenu'
@@ -34,7 +33,7 @@ export const NavBar = () => {
       className={`fixed z-[9999] top-0 w-full ${scrolled ? 'bg-white shadow-md' : '-translate-y-20'} rounded-b-lg py-4 px-8 lg:px-16 flex flex-row justify-between items-center transition-all ease-in-out duration-300`}
     >
       <Link href={'/'}>
-        <Image src={navLogo} alt="SAM Logo" className="h-10 w-9" />
+        <img src={navLogo.src} alt="SAM Logo" className="h-10 w-9" />
       </Link>
       <div className="w-fit flex flex-row items-center gap-1">
         {!isDesktop ? (
@@ -52,16 +51,16 @@ export const NavBar = () => {
                       <div className="w-full h-full flex flex-col justify-center items-center gap-2">
                         <div className="flex flex-row gap-4 h-fit w-fit">
                           <a href="https://www.facebook.com/profile.php?id=61553716456220">
-                            <Image src={facebook} alt="Social Icon" />
+                            <img src={facebook.src} alt="Social Icon" />
                           </a>
                           <a href="/">
-                            <Image src={threads} alt="Social Icon" />
+                            <img src={threads.src} alt="Social Icon" />
                           </a>
                           <a href="/">
-                            <Image src={instagram} alt="Social Icon" />
+                            <img src={instagram.src} alt="Social Icon" />
                           </a>
                           <a href="/">
-                            <Image src={linkedin} alt="Social Icon" />
+                            <img src={linkedin.src} alt="Social Icon" />
                           </a>
                         </div>
                       </div>

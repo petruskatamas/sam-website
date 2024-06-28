@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import Image, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
 import samLogo from '@/images/sam-logo.png'
 import appleLogo from '@/images/app-store.png'
 import playStoreLogo from '@/images/robot.png'
@@ -22,8 +22,8 @@ const HeroCard = ({ name, link, qrCode, image, tooltip }: HeroCradInterface) => 
   return (
     <a href={link} className="relative group">
       <div className="relative z-[2] w-[200px] p-6 flex flex-col items-center gap-6 rounded-lg shadow-2xl bg-white border-slate-200 border-2">
-        <Image src={image} alt={name} className="w-[60px] h-[65px]" />
-        <Image src={qrCode} alt={`QR Code - ${name}`} className="w-full" />
+        <img src={image.src} alt={name} className="w-[60px] h-[65px]" />
+        <img src={qrCode.src} alt={`QR Code - ${name}`} className="w-full" />
       </div>
       <div className="absolute z-[1] -translate-y-16 group-hover:-translate-y-0 flex p-3 py-1 w-full items-center justify-center -bottom-[50px] rounded-lg bg-black bg-opacity-25 text-white transition-all ease-in-out duration-300">
         <div className="relative">
@@ -54,8 +54,8 @@ export const MainPageHero = () => {
         </div>
         <div className="flex flex-row justify-center items-center w-full h-full">
           <div className="w-2/3 lg:w-1/2 flex flex-col items-start gap-10 max-w-[400px]">
-            <Image
-              src={samLogo}
+            <img
+              src={samLogo.src}
               alt="Simple Accounting Management"
               className="w-full lg:animate-fade-right lg:animate-duration-[800ms] lg:animate-ease-in-out"
             />
@@ -89,8 +89,8 @@ export const MainPageHero = () => {
                 className="w-fit h-fit flex items-center shadow-lg"
                 href="https://play.google.com/store/apps/details?id=io.ionic.samapp&pli=1"
               >
-                <Image
-                  src={getItInPlay}
+                <img
+                  src={getItInPlay.src}
                   alt="Play Strore"
                   className="w-[200px] sm:h-[57px] rounded-xl"
                 />
@@ -99,7 +99,7 @@ export const MainPageHero = () => {
                 className="w-fit h-fit shadow-lg"
                 href="https://apps.apple.com/hu/app/sam/id6450101726?l=hu"
               >
-                <Image src={getItInApp} alt="App Strore" className="w-[200px] sm:h-[60px]" />
+                <img src={getItInApp.src} alt="App Strore" className="w-[200px] sm:h-[60px]" />
               </a>
             </div>
           </div>

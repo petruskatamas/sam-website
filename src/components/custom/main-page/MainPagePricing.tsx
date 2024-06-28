@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import samLogo from '@/images/sam-logo-small.svg'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
@@ -130,8 +129,8 @@ export const MainPagePricing = () => {
           </div>
           <div className="flex flex-row justify-between gap-4 items-center">
             <div className="w-full h-[1px] bg-primary-orange" />
-            <Image
-              src={samLogo}
+            <img
+              src={samLogo.src}
               alt="SAM Logo"
               className="w-16 h-16 group-hover:-translate-y-1 transition-all ease-in-out duration-300"
             />
