@@ -18,6 +18,7 @@ import { Switch } from '@/components/ui/switch'
 import { SendHorizonalIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useToast } from '@/components/ui/use-toast'
+import emailjs from '@emailjs/browser'
 
 export const phoneRegex = /^\+3620|^\+3630|^\+3670|^\+361|^\+3631|^\0620|^\0630|^\0670|^\061|^\0631/
 
@@ -64,19 +65,19 @@ const CompanyFormComponent = () => {
 
   const onCompanySubmit = async (values: z.infer<typeof companyFormSchema>) => {
     try {
-      const result = await fetch('/api/send/internal/company', {
-        method: 'POST',
-        body: JSON.stringify(values)
+      const templateParams = {
+        person: `${values.companyPerson}`,
+        email: `${values.email}`,
+        phone: `${values.phone}`,
+        company: `${values.companyName}`,
+        company_type: 'Magáncég',
+        num_of_companies: '-',
+        used_programs: '-',
+        note: `${values.note}`
+      }
+      emailjs.send('service_g662gyr', 'template_y374x06', templateParams, {
+        publicKey: 'shcj2zboAt4Xg04dp'
       })
-        .then((res) => res.json())
-        // eslint-disable-next-line no-unused-vars
-        .then((data) => {
-          return fetch('/api/send/thank-you', {
-            method: 'POST',
-            body: JSON.stringify(values)
-          }).then((res) => res.json())
-        })
-      return result
     } catch (error) {
       toast({
         variant: 'destructive',

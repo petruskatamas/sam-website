@@ -19,6 +19,7 @@ import { Switch } from '@/components/ui/switch'
 import { SendHorizonalIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useToast } from '@/components/ui/use-toast'
+import emailjs from '@emailjs/browser'
 
 const officeFormSchema = z.object({
   email: z.string().email({
@@ -71,19 +72,19 @@ const OfficeFormComponent = () => {
 
   const onOfficeSubmit = async (values: z.infer<typeof officeFormSchema>) => {
     try {
-      const result = await fetch('/api/send/internal/office', {
-        method: 'POST',
-        body: JSON.stringify(values)
+      const templateParams = {
+        person: `${values.officePerson}`,
+        email: `${values.email}`,
+        phone: `${values.phone}`,
+        company: `${values.officeName}`,
+        company_type: 'Könyvelőiroda',
+        num_of_companies: `${values.numOfCompanies}`,
+        used_programs: `${values.usedPrograms}`,
+        note: `${values.note}`
+      }
+      emailjs.send('service_g662gyr', 'template_y374x06', templateParams, {
+        publicKey: 'shcj2zboAt4Xg04dp'
       })
-        .then((res) => res.json())
-        // eslint-disable-next-line no-unused-vars
-        .then((data) => {
-          return fetch('/api/send/thank-you', {
-            method: 'POST',
-            body: JSON.stringify(values)
-          }).then((res) => res.json())
-        })
-      return result
     } catch (error) {
       toast({
         variant: 'destructive',
