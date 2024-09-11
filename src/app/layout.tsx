@@ -8,12 +8,18 @@ import { Footer } from '@/components/custom/generic-components/Footer'
 import { Toaster } from '@/components/ui/toaster'
 import CookieBanner from '@/components/custom/generic-components/CookieBanner'
 import Script from 'next/script'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'SAM - Simple Accounting Management',
-  description: 'EGY JÓ SAM MINDENT LÁT'
+  description: 'EGY JÓ SAM MINDENT LÁT',
+  verification: {
+    other: {
+      'facebook-domain-verification': '0wnqp7owjgporkphwuam6o8chtuipk'
+    }
+  }
 }
 
 export default function RootLayout({
@@ -23,6 +29,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=8569448136421117&ev=PageView&noscript=1"
+          />
+        </noscript>
+      </Head>
       <body className={`${inter.className} bg-white`}>
         <NavBar />
         {children}
@@ -44,14 +60,6 @@ export default function RootLayout({
           fbq('track', 'PageView');
         `}
       </Script>
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=8569448136421117&ev=PageView&noscript=1"
-        />
-      </noscript>
     </html>
   )
 }
