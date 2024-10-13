@@ -60,6 +60,17 @@ export default function RootLayout({
           fbq('track', 'PageView');
         `}
       </Script>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-1YJJT570VC"/script`}
+      />
+      <Script id="" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());  gtag('config', 'G-1YJJT570VC');
+        `}
+      </Script>
     </html>
   )
 }
